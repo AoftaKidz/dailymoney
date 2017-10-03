@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class ReportModel {
+    var date:String = ""
+    var time:String = ""
+    var title:String = ""
+    var amount:Float = 0.0
+    
+    //Checkmark
+    var isSelected:Bool = false
+    
+}

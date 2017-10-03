@@ -10,14 +10,17 @@ import UIKit
 
 class TableReportVC: UITableViewController {
 
+    var dataLists:[ReportModel] = []
+    var dailyReports:[ReportModel] = []
+    var monthlyReports:[ReportModel] = []
+    
+    var currentDate:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        currentDate = "30-09-2560"//Utility.currentDate()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,27 +29,98 @@ class TableReportVC: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        let header = view as? UITableViewHeaderFooterView
+        header?.textLabel?.font = UIFont(name: "Arial Hebrew", size: 16) // change it according to ur requirement
+        header?.textLabel?.textColor = UIColor.yellow // change it according to ur requirement
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if section == 0{
+            return dailyReports.count
+        }else{
+            return monthlyReports.count
+        }
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        
+        var cell:ReportCell
+        
+        if indexPath.section == 0{
+            cell = tableView.dequeueReusableCell(withIdentifier: "reportCell", for: indexPath) as! ReportCell
+            let report:ReportModel = dailyReports[indexPath.row]
+            cell.lbTitle.text = report.title
+            cell.lbAmount.text = "\(report.amount)"
+            cell.lbTitle.textColor = UIColor.white
+            cell.lbAmount.textColor = UIColor.white
+            
+        }else{
+            cell = tableView.dequeueReusableCell(withIdentifier: "reportCell", for: indexPath) as! ReportCell
+            let reverseDay = monthlyReports.count - indexPath.row - 1
+            let report:ReportModel = monthlyReports[reverseDay]
+            cell.lbTitle.text = report.title
+            cell.lbAmount.text = "\(report.amount)"
+            
+            if currentDate == report.title{
+                cell.lbTitle.textColor = UIColor.green
+                cell.lbAmount.textColor = UIColor.green
+            }else{
+                cell.lbTitle.textColor = UIColor.white
+                cell.lbAmount.textColor = UIColor.white
+            }
+        }
 
         return cell
     }
-    */
-
+ 
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 50
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0{
+//            let date = Date()
+//            let calendar = Calendar.current
+//            
+//            let year = calendar.component(.year, from: date)
+//            let month = calendar.component(.month, from: date)
+//            let monthName = Utility.monthNameTH(index: month-1)
+//            let day = calendar.component(.day, from: date)
+//            return "\(day) \(monthName) \(year)"
+            var dateArray = currentDate.components(separatedBy: "-")
+            let m = Utility.calMonthByDate(date: currentDate)
+            let d = Utility.calDayByDate(date: currentDate)
+            let monthName = Utility.monthNameTH(index: m-1)
+            return "\(d) \(monthName) \(dateArray[2])"
+            
+        }else{
+//            let date = Date()
+//            let calendar = Calendar.current
+//            
+//            let year = calendar.component(.year, from: date)
+//            let month = calendar.component(.month, from: date)
+//            let monthName = Utility.monthNameTH(index: month-1)
+////            let day = calendar.component(.day, from: date)
+//            return "\(monthName) \(year)"
+            var dateArray = currentDate.components(separatedBy: "-")
+            let m = Utility.calMonthByDate(date: currentDate)
+            let monthName = Utility.monthNameTH(index: m-1)
+            return "\(monthName) \(dateArray[2])"
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

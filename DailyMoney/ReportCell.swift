@@ -10,6 +10,9 @@ import UIKit
 
 class ReportCell: UITableViewCell {
 
+    @IBOutlet weak var lbAmount: UILabel!
+    @IBOutlet weak var tfAmount: UITextField!
+    @IBOutlet weak var lbTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

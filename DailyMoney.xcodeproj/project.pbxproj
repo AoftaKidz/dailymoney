@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		543A6FD55FDC4DA7904CDEF8 /* Pods_DailyMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B205494B48BA89E8D8984924 /* Pods_DailyMoney.framework */; };
+		FD1439531F7B8E0A008B26E6 /* Reports.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD1439521F7B8E0A008B26E6 /* Reports.plist */; };
+		FD48D5FB1F80E0B800353AC9 /* ChartsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD48D5FA1F80E0B800353AC9 /* ChartsStoryboard.storyboard */; };
+		FD48D5FD1F80E29D00353AC9 /* ChartsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD48D5FC1F80E29D00353AC9 /* ChartsVC.swift */; };
+		FD5AF33C1F7D46CA00F3343E /* ReportTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5AF33B1F7D46CA00F3343E /* ReportTableVC.swift */; };
+		FD5AF3411F7E363600F3343E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5AF33D1F7E363600F3343E /* Bolts.framework */; };
+		FD5AF3421F7E363600F3343E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5AF33E1F7E363600F3343E /* FBSDKCoreKit.framework */; };
+		FD5AF3431F7E363600F3343E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5AF33F1F7E363600F3343E /* FBSDKLoginKit.framework */; };
+		FD5AF3441F7E363600F3343E /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5AF3401F7E363600F3343E /* FBSDKShareKit.framework */; };
+		FD5AF3471F7F982E00F3343E /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5AF3461F7F982E00F3343E /* SigninVC.swift */; };
+		FD5AF34A1F7FA10F00F3343E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5AF3491F7FA10F00F3343E /* Utility.swift */; };
 		FD79B6861F79FF2200366762 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD79B6851F79FF2200366762 /* AppDelegate.swift */; };
 		FD79B6881F79FF2200366762 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD79B6871F79FF2200366762 /* ViewController.swift */; };
 		FD79B68B1F79FF2200366762 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD79B6891F79FF2200366762 /* Main.storyboard */; };
@@ -14,6 +25,15 @@
 		FD79B6901F79FF2200366762 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD79B68E1F79FF2200366762 /* LaunchScreen.storyboard */; };
 		FD79B69B1F79FF2200366762 /* DailyMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD79B69A1F79FF2200366762 /* DailyMoneyTests.swift */; };
 		FD79B6A61F79FF2200366762 /* DailyMoneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD79B6A51F79FF2200366762 /* DailyMoneyUITests.swift */; };
+		FD824A391F7B8176003C4139 /* DatabaseMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD824A381F7B8176003C4139 /* DatabaseMgr.swift */; };
+		FDB0B12B1F80FC7000DB0866 /* ChartsMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB0B12A1F80FC7000DB0866 /* ChartsMgr.swift */; };
+		FDB0B12D1F81289F00DB0866 /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB0B12C1F81289F00DB0866 /* ChartCell.swift */; };
+		FDC073D41F7AB1A100C74740 /* TableReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC073D31F7AB1A100C74740 /* TableReportVC.swift */; };
+		FDC073D71F7B4D2500C74740 /* ReportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC073D61F7B4D2500C74740 /* ReportModel.swift */; };
+		FDC073DB1F7B529600C74740 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC073DA1F7B529600C74740 /* ReportCell.swift */; };
+		FDC073DD1F7B54BD00C74740 /* ContentViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC073DC1F7B54BD00C74740 /* ContentViewVC.swift */; };
+		FDCFF7ED1F7B98D30027BF29 /* AddTableReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFF7EC1F7B98D30027BF29 /* AddTableReportVC.swift */; };
+		FDFC50F51F7CFB61005037B1 /* ReportTableStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDFC50F41F7CFB61005037B1 /* ReportTableStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +54,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A54CE53172C63A72C3C3E64 /* Pods_DailyMoneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyMoneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A1DC74AFE38F6B73CC4CFC7 /* Pods-DailyMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyMoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyMoney/Pods-DailyMoney.debug.xcconfig"; sourceTree = "<group>"; };
+		88915E06FDCEE445AC185668 /* Pods-DailyMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyMoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyMoney/Pods-DailyMoney.release.xcconfig"; sourceTree = "<group>"; };
+		B205494B48BA89E8D8984924 /* Pods_DailyMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E921471013CBED45A68BA2B3 /* Pods_DailyMoneyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyMoneyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD1439521F7B8E0A008B26E6 /* Reports.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Reports.plist; sourceTree = "<group>"; };
+		FD48D5FA1F80E0B800353AC9 /* ChartsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChartsStoryboard.storyboard; sourceTree = "<group>"; };
+		FD48D5FC1F80E29D00353AC9 /* ChartsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsVC.swift; sourceTree = "<group>"; };
+		FD48D5FE1F80E98B00353AC9 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../../../Library/Developer/Xcode/DerivedData/DailyMoney-buwoqwdepjzccyeqyptephsvzxip/Build/Products/Debug-iphoneos/Charts/Charts.framework"; sourceTree = "<group>"; };
+		FD5AF33B1F7D46CA00F3343E /* ReportTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTableVC.swift; sourceTree = "<group>"; };
+		FD5AF33D1F7E363600F3343E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		FD5AF33E1F7E363600F3343E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		FD5AF33F1F7E363600F3343E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		FD5AF3401F7E363600F3343E /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		FD5AF3461F7F982E00F3343E /* SigninVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
+		FD5AF3491F7FA10F00F3343E /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		FD79B6821F79FF2200366762 /* DailyMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD79B6851F79FF2200366762 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD79B6871F79FF2200366762 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +83,15 @@
 		FD79B6A11F79FF2200366762 /* DailyMoneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyMoneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD79B6A51F79FF2200366762 /* DailyMoneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMoneyUITests.swift; sourceTree = "<group>"; };
 		FD79B6A71F79FF2200366762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD824A381F7B8176003C4139 /* DatabaseMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseMgr.swift; sourceTree = "<group>"; };
+		FDB0B12A1F80FC7000DB0866 /* ChartsMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsMgr.swift; sourceTree = "<group>"; };
+		FDB0B12C1F81289F00DB0866 /* ChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
+		FDC073D31F7AB1A100C74740 /* TableReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableReportVC.swift; sourceTree = "<group>"; };
+		FDC073D61F7B4D2500C74740 /* ReportModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportModel.swift; sourceTree = "<group>"; };
+		FDC073DA1F7B529600C74740 /* ReportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
+		FDC073DC1F7B54BD00C74740 /* ContentViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewVC.swift; sourceTree = "<group>"; };
+		FDCFF7EC1F7B98D30027BF29 /* AddTableReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableReportVC.swift; sourceTree = "<group>"; };
+		FDFC50F41F7CFB61005037B1 /* ReportTableStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReportTableStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +99,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				543A6FD55FDC4DA7904CDEF8 /* Pods_DailyMoney.framework in Frameworks */,
+				FD5AF3421F7E363600F3343E /* FBSDKCoreKit.framework in Frameworks */,
+				FD5AF3441F7E363600F3343E /* FBSDKShareKit.framework in Frameworks */,
+				FD5AF3431F7E363600F3343E /* FBSDKLoginKit.framework in Frameworks */,
+				FD5AF3411F7E363600F3343E /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +124,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59FC3622E248EC9BB922A858 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD48D5FE1F80E98B00353AC9 /* Charts.framework */,
+				FD5AF33D1F7E363600F3343E /* Bolts.framework */,
+				FD5AF33E1F7E363600F3343E /* FBSDKCoreKit.framework */,
+				FD5AF33F1F7E363600F3343E /* FBSDKLoginKit.framework */,
+				FD5AF3401F7E363600F3343E /* FBSDKShareKit.framework */,
+				B205494B48BA89E8D8984924 /* Pods_DailyMoney.framework */,
+				3A54CE53172C63A72C3C3E64 /* Pods_DailyMoneyTests.framework */,
+				E921471013CBED45A68BA2B3 /* Pods_DailyMoneyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3FF045496F4E7DA13EE0984 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A1DC74AFE38F6B73CC4CFC7 /* Pods-DailyMoney.debug.xcconfig */,
+				88915E06FDCEE445AC185668 /* Pods-DailyMoney.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FD48D5F81F800D5100353AC9 /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DatePicker;
+			sourceTree = "<group>";
+		};
+		FD48D5F91F80E05D00353AC9 /* charts */ = {
+			isa = PBXGroup;
+			children = (
+				FD48D5FA1F80E0B800353AC9 /* ChartsStoryboard.storyboard */,
+				FD48D5FC1F80E29D00353AC9 /* ChartsVC.swift */,
+				FDB0B12A1F80FC7000DB0866 /* ChartsMgr.swift */,
+				FDB0B12C1F81289F00DB0866 /* ChartCell.swift */,
+			);
+			name = charts;
+			sourceTree = "<group>";
+		};
+		FD5AF3451F7F980000F3343E /* login */ = {
+			isa = PBXGroup;
+			children = (
+				FD5AF3461F7F982E00F3343E /* SigninVC.swift */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		FD5AF3481F7FA0FE00F3343E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				FD5AF3491F7FA10F00F3343E /* Utility.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
 		FD79B6791F79FF2200366762 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +189,8 @@
 				FD79B6991F79FF2200366762 /* DailyMoneyTests */,
 				FD79B6A41F79FF2200366762 /* DailyMoneyUITests */,
 				FD79B6831F79FF2200366762 /* Products */,
+				D3FF045496F4E7DA13EE0984 /* Pods */,
+				59FC3622E248EC9BB922A858 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +207,20 @@
 		FD79B6841F79FF2200366762 /* DailyMoney */ = {
 			isa = PBXGroup;
 			children = (
+				FD48D5F91F80E05D00353AC9 /* charts */,
+				FD48D5F81F800D5100353AC9 /* DatePicker */,
+				FD5AF3481F7FA0FE00F3343E /* Utility */,
+				FD5AF3451F7F980000F3343E /* login */,
+				FD824A371F7B8155003C4139 /* database */,
+				FDC073D81F7B525000C74740 /* Table */,
+				FDC073D51F7B4D0200C74740 /* Model */,
 				FD79B6851F79FF2200366762 /* AppDelegate.swift */,
 				FD79B6871F79FF2200366762 /* ViewController.swift */,
 				FD79B6891F79FF2200366762 /* Main.storyboard */,
 				FD79B68C1F79FF2200366762 /* Assets.xcassets */,
 				FD79B68E1F79FF2200366762 /* LaunchScreen.storyboard */,
 				FD79B6911F79FF2200366762 /* Info.plist */,
+				FDC073DC1F7B54BD00C74740 /* ContentViewVC.swift */,
 			);
 			path = DailyMoney;
 			sourceTree = "<group>";
@@ -125,6 +243,43 @@
 			path = DailyMoneyUITests;
 			sourceTree = "<group>";
 		};
+		FD824A371F7B8155003C4139 /* database */ = {
+			isa = PBXGroup;
+			children = (
+				FD824A381F7B8176003C4139 /* DatabaseMgr.swift */,
+				FD1439521F7B8E0A008B26E6 /* Reports.plist */,
+			);
+			name = database;
+			sourceTree = "<group>";
+		};
+		FDC073D51F7B4D0200C74740 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDC073D61F7B4D2500C74740 /* ReportModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FDC073D81F7B525000C74740 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				FDC073D91F7B526200C74740 /* Cell */,
+				FDC073D31F7AB1A100C74740 /* TableReportVC.swift */,
+				FDCFF7EC1F7B98D30027BF29 /* AddTableReportVC.swift */,
+				FDFC50F41F7CFB61005037B1 /* ReportTableStoryboard.storyboard */,
+				FD5AF33B1F7D46CA00F3343E /* ReportTableVC.swift */,
+			);
+			name = Table;
+			sourceTree = "<group>";
+		};
+		FDC073D91F7B526200C74740 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FDC073DA1F7B529600C74740 /* ReportCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +287,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD79B6AA1F79FF2200366762 /* Build configuration list for PBXNativeTarget "DailyMoney" */;
 			buildPhases = (
+				A1BCEF5B883176C837F78246 /* [CP] Check Pods Manifest.lock */,
 				FD79B67E1F79FF2200366762 /* Sources */,
 				FD79B67F1F79FF2200366762 /* Frameworks */,
 				FD79B6801F79FF2200366762 /* Resources */,
+				5D023162D38013C399D993D3 /* [CP] Embed Pods Frameworks */,
+				B499749E32D77B08FC504D58 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,6 +395,9 @@
 			files = (
 				FD79B6901F79FF2200366762 /* LaunchScreen.storyboard in Resources */,
 				FD79B68D1F79FF2200366762 /* Assets.xcassets in Resources */,
+				FD48D5FB1F80E0B800353AC9 /* ChartsStoryboard.storyboard in Resources */,
+				FDFC50F51F7CFB61005037B1 /* ReportTableStoryboard.storyboard in Resources */,
+				FD1439531F7B8E0A008B26E6 /* Reports.plist in Resources */,
 				FD79B68B1F79FF2200366762 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,13 +418,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5D023162D38013C399D993D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DailyMoney/Pods-DailyMoney-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1BCEF5B883176C837F78246 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B499749E32D77B08FC504D58 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DailyMoney/Pods-DailyMoney-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FD79B67E1F79FF2200366762 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FD79B6881F79FF2200366762 /* ViewController.swift in Sources */,
+				FDC073DD1F7B54BD00C74740 /* ContentViewVC.swift in Sources */,
+				FD5AF3471F7F982E00F3343E /* SigninVC.swift in Sources */,
+				FD5AF34A1F7FA10F00F3343E /* Utility.swift in Sources */,
+				FDB0B12B1F80FC7000DB0866 /* ChartsMgr.swift in Sources */,
+				FDC073D71F7B4D2500C74740 /* ReportModel.swift in Sources */,
+				FDC073D41F7AB1A100C74740 /* TableReportVC.swift in Sources */,
 				FD79B6861F79FF2200366762 /* AppDelegate.swift in Sources */,
+				FDB0B12D1F81289F00DB0866 /* ChartCell.swift in Sources */,
+				FD48D5FD1F80E29D00353AC9 /* ChartsVC.swift in Sources */,
+				FD824A391F7B8176003C4139 /* DatabaseMgr.swift in Sources */,
+				FDC073DB1F7B529600C74740 /* ReportCell.swift in Sources */,
+				FDCFF7ED1F7B98D30027BF29 /* AddTableReportVC.swift in Sources */,
+				FD5AF33C1F7D46CA00F3343E /* ReportTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +580,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -404,7 +625,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -415,9 +636,15 @@
 		};
 		FD79B6AB1F79FF2200366762 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A1DC74AFE38F6B73CC4CFC7 /* Pods-DailyMoney.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CVW8B7M688;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = DailyMoney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = th.co.kidrock.DailyMoney;
@@ -428,9 +655,15 @@
 		};
 		FD79B6AC1F79FF2200366762 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88915E06FDCEE445AC185668 /* Pods-DailyMoney.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CVW8B7M688;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = DailyMoney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = th.co.kidrock.DailyMoney;
@@ -516,6 +749,7 @@
 				FD79B6AC1F79FF2200366762 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD79B6AD1F79FF2200366762 /* Build configuration list for PBXNativeTarget "DailyMoneyTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +758,7 @@
 				FD79B6AF1F79FF2200366762 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD79B6B01F79FF2200366762 /* Build configuration list for PBXNativeTarget "DailyMoneyUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +767,7 @@
 				FD79B6B21F79FF2200366762 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

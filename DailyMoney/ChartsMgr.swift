@@ -22,12 +22,12 @@ class ChartData {
     var type:Int = 0
 }
 
-class Charts {
+class ChartsMgr {
     
     static func line(points:ChartData,view:LineChartView){
         var chartData:[ChartDataEntry] = []
-        
-        for i in 0...points.x.count{
+        let count = points.x.count - 1
+        for i in 0...count{
             
             let p = ChartDataEntry(x: points.x[i], y: points.y[i])
             chartData.append(p)
@@ -49,8 +49,8 @@ class Charts {
     static func bar(points:ChartData,view:BarChartView){
         
         var chartData:[BarChartDataEntry] = []
-        
-        for i in 0...points.x.count{
+        let count = points.x.count - 1
+        for i in 0...count{
             
             let p = BarChartDataEntry(x: points.x[i], y: points.y[i])
             chartData.append(p)
@@ -74,7 +74,8 @@ class Charts {
         // Basic set up of plan chart
         var chartData:[PieChartDataEntry] = []
         
-        for i in 0...points.x.count{
+        let count = points.x.count - 1
+        for i in 0...count{
             
             let p = PieChartDataEntry(value: points.x[i], label: points.label[i])
             chartData.append(p)
@@ -86,7 +87,7 @@ class Charts {
         view.chartDescription?.text = points.description
         
         // Color
-        dataSet.colors = ChartColorTemplates.joyful()
+        dataSet.colors = ChartColorTemplates.colorful()
         //dataSet.valueColors = [UIColor.black]
         view.backgroundColor = UIColor.black
         view.holeColor = UIColor.clear

@@ -1,7 +1,121 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--ChartsVC-->
+        <scene sceneID="h0Y-wI-fsc">
+            <objects>
+                <viewController storyboardIdentifier="ChartsVC" id="5s8-vk-bIr" customClass="ChartsVC" customModule="DailyMoney" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nKH-VJ-wR2"/>
+                        <viewControllerLayoutGuide type="bottom" id="dHE-jU-Ly1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2fO-ip-iCA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="FQm-ji-oBb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lineChartCell" rowHeight="240" id="DmQ-Dz-TKg" customClass="ChartCell" customModule="DailyMoney" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="240"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DmQ-Dz-TKg" id="p7e-lJ-fZZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="239.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1E-DO-gN6" customClass="LineChartView" customModule="Charts">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="t1E-DO-gN6" secondAttribute="trailing" id="7ad-M8-NZG"/>
+                                                <constraint firstItem="t1E-DO-gN6" firstAttribute="leading" secondItem="p7e-lJ-fZZ" secondAttribute="leading" id="JkN-Gp-n3x"/>
+                                                <constraint firstItem="t1E-DO-gN6" firstAttribute="top" secondItem="p7e-lJ-fZZ" secondAttribute="top" id="PZC-xD-weE"/>
+                                                <constraint firstAttribute="bottom" secondItem="t1E-DO-gN6" secondAttribute="bottom" id="bFD-9c-lTO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lineView" destination="t1E-DO-gN6" id="V6z-7j-rNm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="barChartCell" rowHeight="240" id="cwl-pn-ZU2" customClass="ChartCell" customModule="DailyMoney" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="295.5" width="375" height="240"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cwl-pn-ZU2" id="5mv-AV-nxl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="239.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEb-av-cRV" customClass="BarChartView" customModule="Charts">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="IEb-av-cRV" secondAttribute="trailing" id="JoA-un-GEn"/>
+                                                <constraint firstAttribute="bottom" secondItem="IEb-av-cRV" secondAttribute="bottom" id="O0t-KK-Dsq"/>
+                                                <constraint firstItem="IEb-av-cRV" firstAttribute="leading" secondItem="5mv-AV-nxl" secondAttribute="leading" id="XOI-AQ-GvE"/>
+                                                <constraint firstItem="IEb-av-cRV" firstAttribute="top" secondItem="5mv-AV-nxl" secondAttribute="top" id="jdE-Z4-PJ5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="barView" destination="IEb-av-cRV" id="AUK-gE-uFK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pieChartCell" rowHeight="240" id="zhZ-K8-Ff4" customClass="ChartCell" customModule="DailyMoney" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="535.5" width="375" height="240"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zhZ-K8-Ff4" id="cTj-Pf-TGD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="239.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Smf-fv-lBh" customClass="PieChartView" customModule="Charts">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Smf-fv-lBh" firstAttribute="leading" secondItem="cTj-Pf-TGD" secondAttribute="leading" id="0e4-bu-OJS"/>
+                                                <constraint firstItem="Smf-fv-lBh" firstAttribute="top" secondItem="cTj-Pf-TGD" secondAttribute="top" id="Fxb-s6-gax"/>
+                                                <constraint firstAttribute="bottom" secondItem="Smf-fv-lBh" secondAttribute="bottom" id="djp-mZ-bu6"/>
+                                                <constraint firstAttribute="trailing" secondItem="Smf-fv-lBh" secondAttribute="trailing" id="j0c-yI-fit"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pieView" destination="Smf-fv-lBh" id="hos-Dj-Yfr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5s8-vk-bIr" id="Vxa-ne-VbQ"/>
+                                    <outlet property="delegate" destination="5s8-vk-bIr" id="gzn-x6-5L6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FQm-ji-oBb" secondAttribute="trailing" id="0QW-iG-oaD"/>
+                            <constraint firstItem="dHE-jU-Ly1" firstAttribute="top" secondItem="FQm-ji-oBb" secondAttribute="bottom" id="gwU-7C-QmT"/>
+                            <constraint firstItem="FQm-ji-oBb" firstAttribute="leading" secondItem="2fO-ip-iCA" secondAttribute="leading" id="t78-1K-aAa"/>
+                            <constraint firstItem="FQm-ji-oBb" firstAttribute="top" secondItem="nKH-VJ-wR2" secondAttribute="bottom" id="uiD-gN-Tr3"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="FQm-ji-oBb" id="ugX-hu-qIV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HIu-TD-rTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.600000000000001" y="197.45127436281859"/>
+        </scene>
+    </scenes>
 </document>

@@ -7,9 +7,12 @@
 //
 
 import UIKit
-
+import Charts
 class ChartCell: UITableViewCell {
 
+    @IBOutlet weak var pieView: PieChartView!
+    @IBOutlet weak var barView: BarChartView!
+    @IBOutlet weak var lineView: LineChartView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
