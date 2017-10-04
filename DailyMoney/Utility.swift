@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Utility {
     static func currentDate()->String{
@@ -66,5 +67,26 @@ class Utility {
         let monthArray = ["มกราคม","กุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถายน","กรกฎาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม"]
 
         return monthArray[index]
+    }
+    
+    static func underlineLabel(label:UILabel){
+        let text = label.text
+        let textRange = NSMakeRange(0, (text?.characters.count)!)
+        let attributedText = NSMutableAttributedString(string: text!)
+        attributedText.addAttribute(NSUnderlineStyleAttributeName , value: NSUnderlineStyle.styleSingle.rawValue, range: textRange)
+        // Add other attributes if needed
+        label.attributedText = attributedText
+    }
+    
+    static func underlineButton(button:UIButton){
+        
+        let text = button.titleLabel?.text
+        
+        let yourAttributes : [String: Any] = [NSUnderlineStyleAttributeName : NSUnderlineStyle.styleSingle.rawValue]
+        
+        let attributeString = NSMutableAttributedString(string: text!,
+                                                        attributes: yourAttributes)
+        button.setAttributedTitle(attributeString, for: .normal)
+        
     }
 }

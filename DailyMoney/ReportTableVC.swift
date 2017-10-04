@@ -10,6 +10,11 @@ import UIKit
 
 class ReportTableVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate {
 
+    @IBOutlet weak var btnOK: UIButton!
+    @IBOutlet weak var btnDeleteExpense: UIButton!
+    @IBOutlet weak var btnAddExpense: UIButton!
+    @IBOutlet weak var tfAmount: UITextField!
+    @IBOutlet weak var tfExpense: UITextField!
     @IBOutlet weak var tableView: UITableView!
     var dataLists:[ReportModel] = []
     var isKeyboardShowing:Bool = false
@@ -39,11 +44,16 @@ class ReportTableVC: UIViewController,UITableViewDataSource,UITableViewDelegate,
         
         self.title = "รายจ่าย"
         
-        loadDataFromPlist()
+//        loadDataFromPlist()
         
         NotificationCenter.default.addObserver(self, selector: #selector(ReportTableVC.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ReportTableVC.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
+        Utility.underlineButton(button: btnOK)
+        Utility.underlineButton(button: btnAddExpense)
+        Utility.underlineButton(button: btnDeleteExpense)
+        
+        reloadDataTable()
     }
     
     /**
@@ -51,13 +61,26 @@ class ReportTableVC: UIViewController,UITableViewDataSource,UITableViewDelegate,
      */
     func keyboardWillShow(_ notification: NSNotification){
         // Do something here
+        
         isKeyboardShowing = true
+//        self.animateTextField(up: true)
     }
     
     func keyboardWillHide(_ notification: NSNotification){
         // Do something here
         isKeyboardShowing = false
+//        self.animateTextField(up: false)
     }
+    
+    var kbHeight:CGFloat = 210
+    
+//    func animateTextField(up: Bool) {
+//        let movement = (up ? -kbHeight : kbHeight)
+//        
+//        UIView.animate(withDuration: 0.3, animations: {
+//            self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+//        })
+//    }
     
     /**
      * Called when 'return' key pressed. return NO to ignore.
@@ -67,6 +90,36 @@ class ReportTableVC: UIViewController,UITableViewDataSource,UITableViewDelegate,
         return true
     }
     
+    var moveKeyboardOffset:CGFloat = 0
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        let p = textField.convert(textField.center, to: self.view)
+        print(p)
+        
+        let kbH = self.view.bounds.size.height - kbHeight
+        let tfH = p.y + textField.bounds.size.height
+        
+        if tfH > kbH {
+            //TextField overlapping keyboard
+            
+            moveKeyboardOffset = tfH - kbH + 20
+            print(moveKeyboardOffset)
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.frame = self.view.frame.offsetBy(dx: 0, dy: -self.moveKeyboardOffset)
+            })
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.frame = self.view.frame.offsetBy(dx: 0, dy: self.moveKeyboardOffset)
+        })
+        self.moveKeyboardOffset = 0
+    }
+    
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        view.endEditing(true)
+//    }
    
 //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //        view.endEditing(true)
@@ -112,6 +165,17 @@ class ReportTableVC: UIViewController,UITableViewDataSource,UITableViewDelegate,
             }
         }
         
+    }
+    
+    func reloadDataTable(){
+        
+        if dataLists.count > 0{
+            dataLists.removeAll()
+        }
+        
+        dataLists = DatabaseMgr.getExpense()
+        
+        tableView.reloadData()
     }
 
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -224,4 +288,31 @@ class ReportTableVC: UIViewController,UITableViewDataSource,UITableViewDelegate,
     }
     */
 
+    @IBAction func addExpenseButtonPress(_ sender: Any) {
+        if tfExpense.text == "" {
+            return
+        }
+        
+        DatabaseMgr.addExpense(title: tfExpense.text!, amount: tfAmount.text!)
+        
+        reloadDataTable()
+        
+    }
+    
+    @IBAction func deleteExpenseButtonPress(_ sender: Any) {
+        
+        var checkSomeThing:Bool = false
+        
+        for r in dataLists{
+            if r.isSelected{
+                checkSomeThing = true
+                DatabaseMgr.deleteExpense(title: r.title)
+            }
+        }
+        
+        if checkSomeThing == true{
+            reloadDataTable()
+        }
+    }
+    
 }

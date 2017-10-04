@@ -23,6 +23,12 @@ class DBUser:Object {
     dynamic var specialkey = ""
 }
 
+class DBExpense:Object{
+    dynamic var specialusername = ""
+    dynamic var title = ""
+    dynamic var amount = ""
+}
+
 class DatabaseMgr {
     
 //    static let username:String = "Nuchkamol"
@@ -152,10 +158,10 @@ class DatabaseMgr {
                 monthly.append(report)
             }else{
                 continue
-                let report:ReportModel = ReportModel()
-                report.title = currDate
-                report.amount = 0
-                monthly.append(report)
+//                let report:ReportModel = ReportModel()
+//                report.title = currDate
+//                report.amount = 0
+//                monthly.append(report)
             }
             
         }
@@ -163,15 +169,66 @@ class DatabaseMgr {
         return monthly
     }
     
-    static func yearReports(date:String = Utility.currentDate()){
-        var yearly:[ReportModel] = []
-        let dateArray = date.components(separatedBy: "-")
-        let y:String = dateArray[2]
+//    static func yearReports(date:String = Utility.currentDate()){
+//        var yearly:[ReportModel] = []
+//        let dateArray = date.components(separatedBy: "-")
+//        let y:String = dateArray[2]
+//        
+//        let results = realm.objects(DBReportTable.self).filter("date == '%\(y)' AND specialusername == '\(username)#\(specialKey)' AND ")
+//
+//    }
+    
+    static func getExpense()->[ReportModel]{
         
-        let results = realm.objects(DBReportTable.self).filter("date == '%\(y)' AND specialusername == '\(username)#\(specialKey)' AND ")
+        let specialusername = "\(username)#\(specialKey)"
+        let results = realm.objects(DBExpense.self).filter("specialusername == '\(specialusername)'")
         
+        var reportExpense:[ReportModel] = []
         
-
-
+        if results.count > 0 {
+            for expense in results{
+                let m:ReportModel = ReportModel()
+                m.title = expense.title
+                m.amount = Float(expense.amount)!
+                reportExpense.append(m)
+            }
+        }
+        
+        return reportExpense
+    }
+    
+    static func addExpense(title:String, amount:String){
+        
+        let expense:DBExpense = DBExpense()
+        expense.specialusername = "\(username)#\(specialKey)"
+        expense.title = title
+        expense.amount = amount
+        
+        let results = realm.objects(DBExpense.self).filter("specialusername == '\(expense.specialusername)' AND title == '\(title)'")
+        
+        if results.count == 0 {
+            try! DatabaseMgr.realm.write {
+                //Add new user.
+                DatabaseMgr.realm.add(expense)
+            }
+        }else{
+            for c in results {
+                c.amount = amount
+            }
+        }
+    }
+    
+    static func deleteExpense(title:String){
+        
+        let specialusername = "\(username)#\(specialKey)"
+        let results = realm.objects(DBExpense.self).filter("specialusername == '\(specialusername)' AND title == '\(title)'")
+        
+        if results.count > 0 {
+            try! DatabaseMgr.realm.write {
+                //delete expense
+                DatabaseMgr.realm.delete(results)
+                
+            }
+        }
     }
 }

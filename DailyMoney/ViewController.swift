@@ -12,6 +12,9 @@ import DatePickerDialog
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var btnChartExpense: UIButton!
+    @IBOutlet weak var btnAddExpense: UIButton!
+    @IBOutlet weak var btnCalendar: UIButton!
     var dailyReports:[ReportModel] = []
     var monthlyReports:[ReportModel] = []
     var tableReport:TableReportVC? = nil
@@ -38,6 +41,10 @@ class ViewController: UIViewController {
         self.title = "Daily Money"
 
         currentDate = Utility.currentDate()
+        
+        Utility.underlineButton(button: btnCalendar)
+        Utility.underlineButton(button: btnAddExpense)
+        Utility.underlineButton(button: btnChartExpense)
         
 //        FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
 //        loginButton.center = self.view.center;

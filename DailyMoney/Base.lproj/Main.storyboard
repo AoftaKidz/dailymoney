@@ -125,6 +125,8 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="btnSignin" destination="hzj-4A-pKA" id="Jej-aY-wZL"/>
+                        <outlet property="lbSigningInHeader" destination="fqL-x2-lVc" id="Kkm-py-KGs"/>
                         <outlet property="tfPassword" destination="oSE-id-V7F" id="WR2-7h-VgU"/>
                         <outlet property="tfUsername" destination="Nl9-sl-iTo" id="E9k-mj-fgr"/>
                     </connections>
@@ -241,6 +243,9 @@
                     <navigationItem key="navigationItem" title="Daily Money" id="Mc5-hE-Fc3"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="btnAddExpense" destination="Orz-Jd-7BO" id="nvS-tM-awu"/>
+                        <outlet property="btnCalendar" destination="hob-Wk-YLz" id="6Ww-mg-JLt"/>
+                        <outlet property="btnChartExpense" destination="b0R-wq-CDM" id="Oih-1g-JCb"/>
                         <outlet property="lbSummary" destination="7hW-Im-Hcp" id="v0M-zk-7hi"/>
                     </connections>
                 </viewController>

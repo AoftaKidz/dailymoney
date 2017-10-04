@@ -10,6 +10,8 @@ import UIKit
 
 class SigninVC: UIViewController,UITextFieldDelegate {
 
+    @IBOutlet weak var btnSignin: UIButton!
+    @IBOutlet weak var lbSigningInHeader: UILabel!
     @IBOutlet weak var tfUsername: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     override func viewDidLoad() {
@@ -31,6 +33,8 @@ class SigninVC: UIViewController,UITextFieldDelegate {
         tfUsername.delegate = self
         tfPassword.delegate = self
         
+        Utility.underlineLabel(label: lbSigningInHeader)
+        Utility.underlineButton(button: btnSignin)
         DatabaseMgr.defaultUser()
         
     }
