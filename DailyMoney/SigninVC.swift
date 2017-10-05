@@ -25,6 +25,8 @@ class SigninVC: UIViewController,UITextFieldDelegate {
         navigationController!.navigationBar.tintColor = UIColor.white
         
         navigationController!.navigationBar.barTintColor = UIColor.black
+        self.title = "Tatimii Money"
+        
         tfUsername.text = DatabaseMgr.username
         tfPassword.text = DatabaseMgr.password
         tfPassword.textColor = UIColor.green

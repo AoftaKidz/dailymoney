@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lay5" translatesAutoresizingMaskIntoConstraints="NO" id="ctp-TE-uq4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lay7" translatesAutoresizingMaskIntoConstraints="NO" id="ctp-TE-uq4">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qRZ-AX-Cn7">
@@ -140,6 +140,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="lay5" width="350" height="450"/>
+        <image name="lay7" width="400" height="565"/>
     </resources>
 </document>
