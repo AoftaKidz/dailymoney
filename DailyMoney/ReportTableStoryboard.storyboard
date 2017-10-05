@@ -11,7 +11,7 @@
         <!--Report TableVC-->
         <scene sceneID="Zh2-DJ-mXg">
             <objects>
-                <viewController storyboardIdentifier="ReportTable" id="4yf-Ub-c50" customClass="ReportTableVC" customModule="DailyMoney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReportTable" id="4yf-Ub-c50" customClass="ReportTableVC" customModule="TatimiiMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lAw-Ww-y8n"/>
                         <viewControllerLayoutGuide type="bottom" id="3EK-Ro-zCB"/>
@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jum_bg" translatesAutoresizingMaskIntoConstraints="NO" id="H2o-Gv-LNB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lay2" translatesAutoresizingMaskIntoConstraints="NO" id="H2o-Gv-LNB">
                                 <rect key="frame" x="0.0" y="1" width="375" height="666"/>
                             </imageView>
                             <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xx8-tP-lTL">
@@ -47,8 +47,8 @@
                                 <color key="sectionIndexColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addReportCell" rowHeight="50" id="99g-kI-kue" customClass="ReportCell" customModule="DailyMoney" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addReportCell" rowHeight="50" id="99g-kI-kue" customClass="ReportCell" customModule="TatimiiMoney" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="99g-kI-kue" id="wqR-eX-eqN">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -110,8 +110,8 @@
                                             <outlet property="tfAmount" destination="U4T-1a-Mq0" id="BjS-Tk-1nR"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="showReportCell" rowHeight="50" id="Vql-53-odM" customClass="ReportCell" customModule="DailyMoney" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="105.5" width="375" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="showReportCell" rowHeight="50" id="Vql-53-odM" customClass="ReportCell" customModule="TatimiiMoney" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="106" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vql-53-odM" id="3an-tE-BwQ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -345,6 +345,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="jum_bg" width="400" height="565"/>
+        <image name="lay2" width="427" height="640"/>
     </resources>
 </document>

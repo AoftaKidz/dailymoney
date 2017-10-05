@@ -36,9 +36,11 @@ class DatabaseMgr {
 //    static let specialKey:String = "#25"
 //    static let username:String = "KidRock"
 //    static let password:String = "46215720"
-    static let username:String = "JumJimYaiMai"
+//    static let username:String = "JumJimYaiMai"
+//    static let password:String = "1234"
+    static let username:String = "Tatimii"
     static let password:String = "1234"
-    static let specialKey:String = "#14"
+    static let specialKey:String = "#16"
     static var isReadyToGo:Bool = false
     
     static let realm = try! Realm()
