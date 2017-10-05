@@ -20,9 +20,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jum_bg" translatesAutoresizingMaskIntoConstraints="NO" id="ctp-TE-uq4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qRZ-AX-Cn7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="FQm-ji-oBb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lineChartCell" rowHeight="240" id="DmQ-Dz-TKg" customClass="ChartCell" customModule="DailyMoney" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="240"/>
@@ -33,9 +40,10 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1E-DO-gN6" customClass="LineChartView" customModule="Charts">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
-                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="t1E-DO-gN6" secondAttribute="trailing" id="7ad-M8-NZG"/>
                                                 <constraint firstItem="t1E-DO-gN6" firstAttribute="leading" secondItem="p7e-lJ-fZZ" secondAttribute="leading" id="JkN-Gp-n3x"/>
@@ -43,6 +51,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="t1E-DO-gN6" secondAttribute="bottom" id="bFD-9c-lTO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="lineView" destination="t1E-DO-gN6" id="V6z-7j-rNm"/>
                                         </connections>
@@ -56,9 +65,10 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEb-av-cRV" customClass="BarChartView" customModule="Charts">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
-                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="IEb-av-cRV" secondAttribute="trailing" id="JoA-un-GEn"/>
                                                 <constraint firstAttribute="bottom" secondItem="IEb-av-cRV" secondAttribute="bottom" id="O0t-KK-Dsq"/>
@@ -66,6 +76,7 @@
                                                 <constraint firstItem="IEb-av-cRV" firstAttribute="top" secondItem="5mv-AV-nxl" secondAttribute="top" id="jdE-Z4-PJ5"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="barView" destination="IEb-av-cRV" id="AUK-gE-uFK"/>
                                         </connections>
@@ -79,9 +90,10 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Smf-fv-lBh" customClass="PieChartView" customModule="Charts">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
-                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="Smf-fv-lBh" firstAttribute="leading" secondItem="cTj-Pf-TGD" secondAttribute="leading" id="0e4-bu-OJS"/>
                                                 <constraint firstItem="Smf-fv-lBh" firstAttribute="top" secondItem="cTj-Pf-TGD" secondAttribute="top" id="Fxb-s6-gax"/>
@@ -89,6 +101,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="Smf-fv-lBh" secondAttribute="trailing" id="j0c-yI-fit"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="pieView" destination="Smf-fv-lBh" id="hos-Dj-Yfr"/>
                                         </connections>
@@ -103,9 +116,17 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="FQm-ji-oBb" secondAttribute="trailing" id="0QW-iG-oaD"/>
+                            <constraint firstItem="dHE-jU-Ly1" firstAttribute="top" secondItem="qRZ-AX-Cn7" secondAttribute="bottom" id="9ys-An-5qj"/>
+                            <constraint firstItem="dHE-jU-Ly1" firstAttribute="top" secondItem="ctp-TE-uq4" secondAttribute="bottom" id="NAW-7v-FrA"/>
+                            <constraint firstItem="ctp-TE-uq4" firstAttribute="top" secondItem="nKH-VJ-wR2" secondAttribute="bottom" id="OgT-M0-9Pf"/>
+                            <constraint firstAttribute="trailing" secondItem="ctp-TE-uq4" secondAttribute="trailing" id="Xbx-fO-Wyo"/>
+                            <constraint firstItem="qRZ-AX-Cn7" firstAttribute="leading" secondItem="2fO-ip-iCA" secondAttribute="leading" id="bD9-7Z-Ce1"/>
                             <constraint firstItem="dHE-jU-Ly1" firstAttribute="top" secondItem="FQm-ji-oBb" secondAttribute="bottom" id="gwU-7C-QmT"/>
+                            <constraint firstAttribute="trailing" secondItem="qRZ-AX-Cn7" secondAttribute="trailing" id="mVS-VY-nYP"/>
                             <constraint firstItem="FQm-ji-oBb" firstAttribute="leading" secondItem="2fO-ip-iCA" secondAttribute="leading" id="t78-1K-aAa"/>
                             <constraint firstItem="FQm-ji-oBb" firstAttribute="top" secondItem="nKH-VJ-wR2" secondAttribute="bottom" id="uiD-gN-Tr3"/>
+                            <constraint firstItem="ctp-TE-uq4" firstAttribute="leading" secondItem="2fO-ip-iCA" secondAttribute="leading" id="z52-iL-LEn"/>
+                            <constraint firstItem="qRZ-AX-Cn7" firstAttribute="top" secondItem="nKH-VJ-wR2" secondAttribute="bottom" id="zGw-yJ-Tgu"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -118,4 +139,7 @@
             <point key="canvasLocation" x="21.600000000000001" y="197.45127436281859"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="jum_bg" width="400" height="565"/>
+    </resources>
 </document>

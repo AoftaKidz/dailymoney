@@ -120,6 +120,10 @@ class Utility {
         
         if let reportString = share.string(forKey: "dailyReport") {
             
+            if reportString == ""{
+                return []
+            }
+            
             let titleArray = reportString.components(separatedBy: ",")
             for title in titleArray{
                 let amountArray = title.components(separatedBy: "=")

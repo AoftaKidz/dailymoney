@@ -38,10 +38,11 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
             // Fallback on earlier versions
         }
         
+        self.lbTitle.textColor = UIColor.black
+
          currentDate = Utility.currentDate()
         let reportDate = Utility.getDataFromUserDefault(forKey: "currentDate")
         if currentDate == reportDate{
-            self.lbTitle.textColor = UIColor.green
             reports = Utility.getDailyReportFromUserDefault()
             
             var sum:Float = 0
@@ -113,7 +114,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
         
         let header = view as? UITableViewHeaderFooterView
         header?.textLabel?.font = UIFont(name: "Arial Hebrew", size: 16) // change it according to ur requirement
-        header?.textLabel?.textColor = UIColor.yellow // change it according to ur requirement
+        header?.textLabel?.textColor = UIColor.darkGray // change it according to ur requirement
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -143,6 +144,8 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
         let r = reports[indexPath.row]
         cell.lbAmount.text = "\(r.amount) บาท"
         cell.lbTitle.text = r.title
+        cell.lbTitle.textColor = UIColor.black
+        cell.lbAmount.textColor = UIColor.red
         
         return cell
     }

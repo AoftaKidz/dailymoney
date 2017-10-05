@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aofta_bg" translatesAutoresizingMaskIntoConstraints="NO" id="H01-LQ-Cbb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jum_bg" translatesAutoresizingMaskIntoConstraints="NO" id="H01-LQ-Cbb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5b-oc-Xx8">
@@ -147,6 +147,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jum_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Gho-bK-DGF">
+                                <rect key="frame" x="0.0" y="1" width="375" height="666"/>
+                            </imageView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1w-Xf-Hx9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Orz-Jd-7BO">
                                 <rect key="frame" x="147.5" y="1" width="80" height="30"/>
                                 <constraints>
@@ -221,13 +228,18 @@
                             <constraint firstItem="Orz-Jd-7BO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="1" id="0fz-8P-ZMm"/>
                             <constraint firstItem="Orz-Jd-7BO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="51j-dJ-7Ez"/>
                             <constraint firstItem="7hW-Im-Hcp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7Ra-ja-LvB"/>
+                            <constraint firstItem="d1w-Xf-Hx9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="A6c-pS-g6E"/>
                             <constraint firstItem="hob-Wk-YLz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AQp-Lh-9zo"/>
+                            <constraint firstAttribute="trailing" secondItem="d1w-Xf-Hx9" secondAttribute="trailing" id="Dlm-MG-8Se"/>
                             <constraint firstAttribute="trailing" secondItem="aFN-4g-VcY" secondAttribute="trailing" id="FVW-1h-Sze"/>
                             <constraint firstItem="aFN-4g-VcY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="G4g-d3-zEC"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NU2-CC-F1S" secondAttribute="bottom" id="GvN-gL-pfn"/>
+                            <constraint firstItem="d1w-Xf-Hx9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HCF-ti-o24"/>
                             <constraint firstAttribute="trailing" secondItem="b0R-wq-CDM" secondAttribute="trailing" constant="8" id="HE8-l1-DN9"/>
+                            <constraint firstAttribute="trailing" secondItem="Gho-bK-DGF" secondAttribute="trailing" id="JuW-he-rYa"/>
                             <constraint firstAttribute="trailing" secondItem="NU2-CC-F1S" secondAttribute="trailing" id="MtE-0I-BER"/>
                             <constraint firstItem="7hW-Im-Hcp" firstAttribute="top" secondItem="Orz-Jd-7BO" secondAttribute="bottom" id="QUy-g9-wre"/>
+                            <constraint firstItem="Gho-bK-DGF" firstAttribute="top" secondItem="lgS-ff-EG3" secondAttribute="bottom" id="UpD-C5-PSX"/>
                             <constraint firstItem="NU2-CC-F1S" firstAttribute="top" secondItem="7hW-Im-Hcp" secondAttribute="bottom" id="X1d-fa-0pM"/>
                             <constraint firstItem="lgS-ff-EG3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YvV-cZ-2Zm"/>
                             <constraint firstItem="aFN-4g-VcY" firstAttribute="top" secondItem="b0R-wq-CDM" secondAttribute="bottom" constant="1" id="bRU-vf-Xrq"/>
@@ -235,9 +247,12 @@
                             <constraint firstItem="hob-Wk-YLz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="dFl-wu-dKU"/>
                             <constraint firstItem="b0R-wq-CDM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ey2-jL-cXk"/>
                             <constraint firstItem="aFN-4g-VcY" firstAttribute="top" secondItem="Orz-Jd-7BO" secondAttribute="bottom" id="jvT-Xa-Lqk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gho-bK-DGF" secondAttribute="bottom" id="kXp-zT-pRS"/>
                             <constraint firstItem="NU2-CC-F1S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pPm-6Z-rag"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="d1w-Xf-Hx9" secondAttribute="bottom" id="q0F-Zd-5eI"/>
                             <constraint firstItem="7hW-Im-Hcp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ung-oW-tia"/>
                             <constraint firstAttribute="trailing" secondItem="lgS-ff-EG3" secondAttribute="trailing" id="wRt-8t-DWp"/>
+                            <constraint firstItem="Gho-bK-DGF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zQV-qW-c6B"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Daily Money" id="Mc5-hE-Fc3"/>
@@ -260,7 +275,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" id="mO2-nw-7VN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="596"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reportCell" rowHeight="50" id="zkj-Pm-knA" customClass="ReportCell" customModule="DailyMoney" customModuleProvider="target">
@@ -289,7 +304,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="Mw4-CM-dNM" firstAttribute="leading" secondItem="Myj-kR-eEs" secondAttribute="trailing" constant="8" id="4D8-Kb-2p3"/>
                                                 <constraint firstAttribute="bottom" secondItem="Mw4-CM-dNM" secondAttribute="bottom" constant="8" id="E6q-xu-yYg"/>
@@ -301,6 +316,7 @@
                                             </constraints>
                                         </view>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="AxW-pW-7Gd" firstAttribute="top" secondItem="Etq-Yj-6aJ" secondAttribute="top" id="6Ca-uT-qgt"/>
                                         <constraint firstAttribute="bottom" secondItem="AxW-pW-7Gd" secondAttribute="bottom" id="D7V-tN-sOc"/>
@@ -308,6 +324,7 @@
                                         <constraint firstAttribute="trailing" secondItem="AxW-pW-7Gd" secondAttribute="trailing" id="vJS-Mi-ZJQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="lbAmount" destination="Mw4-CM-dNM" id="YCU-Qe-X2A"/>
                                     <outlet property="lbTitle" destination="Myj-kR-eEs" id="une-CD-JEf"/>
@@ -339,7 +356,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="2DX-Vy-Awr" firstAttribute="leading" secondItem="28d-wz-ZRJ" secondAttribute="trailing" constant="8" id="6FI-Aw-xrb"/>
                                                 <constraint firstItem="28d-wz-ZRJ" firstAttribute="leading" secondItem="2q0-aM-1Xo" secondAttribute="leading" constant="8" id="Ciy-ye-IEP"/>
@@ -351,12 +368,14 @@
                                             </constraints>
                                         </view>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="2q0-aM-1Xo" firstAttribute="top" secondItem="56t-ty-rCc" secondAttribute="top" id="2ku-z1-om8"/>
                                         <constraint firstItem="2q0-aM-1Xo" firstAttribute="leading" secondItem="56t-ty-rCc" secondAttribute="leading" id="ONO-KR-MdL"/>
                                         <constraint firstAttribute="trailing" secondItem="2q0-aM-1Xo" secondAttribute="trailing" id="k3I-MB-OPw"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -561,6 +580,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="aofta_bg" width="360" height="270"/>
+        <image name="jum_bg" width="400" height="565"/>
     </resources>
 </document>

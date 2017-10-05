@@ -34,10 +34,10 @@ class DatabaseMgr {
 //    static let username:String = "Nuchkamol"
 //    static let password:String = "1234"
 //    static let specialKey:String = "#25"
-    static let username:String = "KidRock"
-    static let password:String = "46215720"
-//    static let username:String = "JumJimYaiMai"
-//    static let password:String = "1234"
+//    static let username:String = "KidRock"
+//    static let password:String = "46215720"
+    static let username:String = "JumJimYaiMai"
+    static let password:String = "1234"
     static let specialKey:String = "#14"
     static var isReadyToGo:Bool = false
     
