@@ -46,20 +46,6 @@ class ViewController: UIViewController {
         Utility.underlineButton(button: btnAddExpense)
         Utility.underlineButton(button: btnChartExpense)
         
-//        FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-//        loginButton.center = self.view.center;
-//        [self.view addSubview:loginButton];
-        
-//        let loginButton:FBSDKLoginButton = FBSDKLoginButton()
-//        viewLoginButton.addSubview(loginButton)
-        
-//        if (FBSDKAccessToken.current() != nil){
-//            
-//            viewLoginButton.isHidden = true
-//            
-//        }else{
-//            viewLoginButton.isHidden = false
-//        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -94,7 +80,9 @@ class ViewController: UIViewController {
     
     func reload(){
         if let vc = tableReport{
+            
             dailyReports = DatabaseMgr.dailyReports(date: currentDate)
+            Utility.saveReportToUserDefault(reports: dailyReports)
             monthlyReports = DatabaseMgr.monthlyReports(date: currentDate)
             vc.dailyReports = dailyReports
             vc.monthlyReports = monthlyReports
@@ -114,6 +102,9 @@ class ViewController: UIViewController {
             
             lbSummary.text = "รายวัน : \(sumDaily) บาท, รายเดือน : \(sumMonthly) บาท"
             lbSummary.textColor = UIColor.green
+            
+            Utility.saveDataToUserDefault(value: "\(currentDate)", forKey: "currentDate")
+            Utility.saveDataToUserDefault(value: "\(sumMonthly)", forKey: "summaryMonthly")
         }
         
     }

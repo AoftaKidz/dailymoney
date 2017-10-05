@@ -19,7 +19,7 @@ class TableReportVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        currentDate = "30-09-2560"//Utility.currentDate()
+        currentDate = Utility.currentDate()
         
     }
 

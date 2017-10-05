@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 class Utility {
+    
+    static var widgetReport:[ReportModel] = []
+    
     static func currentDate()->String{
         
         let date = Date()
@@ -88,5 +91,61 @@ class Utility {
                                                         attributes: yourAttributes)
         button.setAttributedTitle(attributeString, for: .normal)
         
+    }
+    
+    static func saveReportToUserDefault(reports:[ReportModel]){
+    
+        let share:UserDefaults = UserDefaults(suiteName: "group.dataGobalTest")!
+        
+        var reportString:String = ""
+        
+        for r in reports{
+            if reportString == ""{
+                reportString = "\(r.title)=\(r.amount)"
+            }else{
+                reportString = "\(reportString),\(r.title)=\(r.amount)"
+            }
+        }
+        print(reportString)
+        share.set(reportString, forKey: "dailyReport")
+        share.synchronize()
+//
+    }
+    
+    static func getDailyReportFromUserDefault()->[ReportModel]{
+        let share:UserDefaults = UserDefaults(suiteName: "group.dataGobalTest")!
+//        share.synchronize()
+        
+        var dailyReport:[ReportModel] = []
+        
+        if let reportString = share.string(forKey: "dailyReport") {
+            
+            let titleArray = reportString.components(separatedBy: ",")
+            for title in titleArray{
+                let amountArray = title.components(separatedBy: "=")
+                
+                let model = ReportModel()
+                model.title = amountArray[0]
+                model.amount = Float(amountArray[1])!
+                
+                dailyReport.append(model)
+            }
+        }
+        
+        return dailyReport
+    }
+    
+    static func saveDataToUserDefault(value:String, forKey defaultName:String){
+        let share:UserDefaults = UserDefaults(suiteName: "group.dataGobalTest")!
+        share.set(value, forKey: defaultName)
+        share.synchronize()
+    }
+    
+    static func getDataFromUserDefault(forKey defaultName:String)->String{
+        let share:UserDefaults = UserDefaults(suiteName: "group.dataGobalTest")!
+        if let value = share.string(forKey: defaultName){
+            return value
+        }
+        return "0"
     }
 }

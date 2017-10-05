@@ -18,3 +18,13 @@ target 'DailyMoney' do
       end
   end
 end
+
+target 'DailyWidget' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    
+    # Pods for DailyMoney
+    pod 'RealmSwift'
+    pod 'Charts', :git=>'https://github.com/danielgindi/Charts.git',:branch=>'pr/2378'
+    
+end

@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jumicon" translatesAutoresizingMaskIntoConstraints="NO" id="H01-LQ-Cbb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aofta_bg" translatesAutoresizingMaskIntoConstraints="NO" id="H01-LQ-Cbb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5b-oc-Xx8">
@@ -561,6 +561,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="jumicon" width="480" height="640"/>
+        <image name="aofta_bg" width="360" height="270"/>
     </resources>
 </document>

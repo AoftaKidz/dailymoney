@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E0F9F67430C1680014A8AD6 /* Pods_DailyWidget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6144C7BA8CB925884D2AA277 /* Pods_DailyWidget.framework */; };
 		543A6FD55FDC4DA7904CDEF8 /* Pods_DailyMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B205494B48BA89E8D8984924 /* Pods_DailyMoney.framework */; };
+		B38EE8FA8195ED061CDDFB4E /* Pods_DailyMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B205494B48BA89E8D8984924 /* Pods_DailyMoney.framework */; };
 		FD1439531F7B8E0A008B26E6 /* Reports.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD1439521F7B8E0A008B26E6 /* Reports.plist */; };
+		FD1A3C5A1F84970B00E3B567 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1A3C591F84970B00E3B567 /* NotificationCenter.framework */; };
+		FD1A3C5D1F84970B00E3B567 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1A3C5C1F84970B00E3B567 /* TodayViewController.swift */; };
+		FD1A3C601F84970B00E3B567 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD1A3C5E1F84970B00E3B567 /* MainInterface.storyboard */; };
+		FD1A3C641F84970B00E3B567 /* DailyWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FD1A3C581F84970B00E3B567 /* DailyWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FD48D5FB1F80E0B800353AC9 /* ChartsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD48D5FA1F80E0B800353AC9 /* ChartsStoryboard.storyboard */; };
 		FD48D5FD1F80E29D00353AC9 /* ChartsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD48D5FC1F80E29D00353AC9 /* ChartsVC.swift */; };
 		FD5AF33C1F7D46CA00F3343E /* ReportTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5AF33B1F7D46CA00F3343E /* ReportTableVC.swift */; };
@@ -26,6 +32,11 @@
 		FD79B69B1F79FF2200366762 /* DailyMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD79B69A1F79FF2200366762 /* DailyMoneyTests.swift */; };
 		FD79B6A61F79FF2200366762 /* DailyMoneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD79B6A51F79FF2200366762 /* DailyMoneyUITests.swift */; };
 		FD824A391F7B8176003C4139 /* DatabaseMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD824A381F7B8176003C4139 /* DatabaseMgr.swift */; };
+		FD99469F1F84DE7F00F92798 /* ReportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC073D61F7B4D2500C74740 /* ReportModel.swift */; };
+		FD9946A01F84DE8600F92798 /* DatabaseMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD824A381F7B8176003C4139 /* DatabaseMgr.swift */; };
+		FD9946A11F84DEA000F92798 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5AF3491F7FA10F00F3343E /* Utility.swift */; };
+		FD9946A21F84DEA300F92798 /* ChartsMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB0B12A1F80FC7000DB0866 /* ChartsMgr.swift */; };
+		FD9946A31F84EB5D00F92798 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC073DA1F7B529600C74740 /* ReportCell.swift */; };
 		FDB0B12B1F80FC7000DB0866 /* ChartsMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB0B12A1F80FC7000DB0866 /* ChartsMgr.swift */; };
 		FDB0B12D1F81289F00DB0866 /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB0B12C1F81289F00DB0866 /* ChartCell.swift */; };
 		FDC073D41F7AB1A100C74740 /* TableReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC073D31F7AB1A100C74740 /* TableReportVC.swift */; };
@@ -33,10 +44,18 @@
 		FDC073DB1F7B529600C74740 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC073DA1F7B529600C74740 /* ReportCell.swift */; };
 		FDC073DD1F7B54BD00C74740 /* ContentViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC073DC1F7B54BD00C74740 /* ContentViewVC.swift */; };
 		FDCFF7ED1F7B98D30027BF29 /* AddTableReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFF7EC1F7B98D30027BF29 /* AddTableReportVC.swift */; };
+		FDF2DF161F8615BC009A3344 /* WidgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF2DF151F8615BC009A3344 /* WidgetCell.swift */; };
 		FDFC50F51F7CFB61005037B1 /* ReportTableStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDFC50F41F7CFB61005037B1 /* ReportTableStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FD1A3C621F84970B00E3B567 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD79B67A1F79FF2200366762 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD1A3C571F84970B00E3B567;
+			remoteInfo = DailyWidget;
+		};
 		FD79B6971F79FF2200366762 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FD79B67A1F79FF2200366762 /* Project object */;
@@ -53,13 +72,40 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FD1A3C681F84970B00E3B567 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FD1A3C641F84970B00E3B567 /* DailyWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3A54CE53172C63A72C3C3E64 /* Pods_DailyMoneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyMoneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60FCB7169B2435603FBF4EA0 /* Pods-DailyWidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyWidget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyWidget/Pods-DailyWidget.debug.xcconfig"; sourceTree = "<group>"; };
+		6144C7BA8CB925884D2AA277 /* Pods_DailyWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1DC74AFE38F6B73CC4CFC7 /* Pods-DailyMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyMoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyMoney/Pods-DailyMoney.debug.xcconfig"; sourceTree = "<group>"; };
 		88915E06FDCEE445AC185668 /* Pods-DailyMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyMoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyMoney/Pods-DailyMoney.release.xcconfig"; sourceTree = "<group>"; };
+		A5BC6B6FC376AB65B946CDCE /* Pods-DailyWidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyWidget.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyWidget/Pods-DailyWidget.release.xcconfig"; sourceTree = "<group>"; };
 		B205494B48BA89E8D8984924 /* Pods_DailyMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E921471013CBED45A68BA2B3 /* Pods_DailyMoneyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyMoneyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1439521F7B8E0A008B26E6 /* Reports.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Reports.plist; sourceTree = "<group>"; };
+		FD1A3C581F84970B00E3B567 /* DailyWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DailyWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD1A3C591F84970B00E3B567 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		FD1A3C5C1F84970B00E3B567 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		FD1A3C5F1F84970B00E3B567 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		FD1A3C611F84970B00E3B567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD1A3C6C1F84C47D00E3B567 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../Library/Developer/Xcode/DerivedData/DailyMoney-bzmbyxgsrhrgnehenkaxrdpzmuvi/Build/Products/Debug-iphoneos/Realm/Realm.framework"; sourceTree = "<group>"; };
+		FD1A3C6D1F84C47D00E3B567 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../Library/Developer/Xcode/DerivedData/DailyMoney-bzmbyxgsrhrgnehenkaxrdpzmuvi/Build/Products/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
+		FD1A3C701F84C56600E3B567 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../Library/Developer/Xcode/DerivedData/DailyMoney-bzmbyxgsrhrgnehenkaxrdpzmuvi/Build/Products/Debug-iphoneos/Charts/Charts.framework"; sourceTree = "<group>"; };
+		FD1A3C7A1F84D27B00E3B567 /* Pods_DailyMoney.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_DailyMoney.framework; path = "Pods/../build/Debug-iphoneos/Pods_DailyMoney.framework"; sourceTree = "<group>"; };
+		FD1A3C7E1F84D68C00E3B567 /* DatePickerDialog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DatePickerDialog.framework; path = "../Library/Developer/Xcode/DerivedData/DailyMoney-bzmbyxgsrhrgnehenkaxrdpzmuvi/Build/Products/Debug-iphoneos/DatePickerDialog/DatePickerDialog.framework"; sourceTree = "<group>"; };
 		FD48D5FA1F80E0B800353AC9 /* ChartsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChartsStoryboard.storyboard; sourceTree = "<group>"; };
 		FD48D5FC1F80E29D00353AC9 /* ChartsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsVC.swift; sourceTree = "<group>"; };
 		FD48D5FE1F80E98B00353AC9 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../../../Library/Developer/Xcode/DerivedData/DailyMoney-buwoqwdepjzccyeqyptephsvzxip/Build/Products/Debug-iphoneos/Charts/Charts.framework"; sourceTree = "<group>"; };
@@ -83,6 +129,8 @@
 		FD79B6A11F79FF2200366762 /* DailyMoneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyMoneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD79B6A51F79FF2200366762 /* DailyMoneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMoneyUITests.swift; sourceTree = "<group>"; };
 		FD79B6A71F79FF2200366762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD8013271F85DEA20046A27A /* DailyWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyWidget.entitlements; sourceTree = "<group>"; };
+		FD8013281F85E9E00046A27A /* DailyMoney.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyMoney.entitlements; sourceTree = "<group>"; };
 		FD824A381F7B8176003C4139 /* DatabaseMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseMgr.swift; sourceTree = "<group>"; };
 		FDB0B12A1F80FC7000DB0866 /* ChartsMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsMgr.swift; sourceTree = "<group>"; };
 		FDB0B12C1F81289F00DB0866 /* ChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
@@ -91,10 +139,20 @@
 		FDC073DA1F7B529600C74740 /* ReportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
 		FDC073DC1F7B54BD00C74740 /* ContentViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewVC.swift; sourceTree = "<group>"; };
 		FDCFF7EC1F7B98D30027BF29 /* AddTableReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableReportVC.swift; sourceTree = "<group>"; };
+		FDF2DF151F8615BC009A3344 /* WidgetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetCell.swift; sourceTree = "<group>"; };
 		FDFC50F41F7CFB61005037B1 /* ReportTableStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReportTableStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FD1A3C551F84970B00E3B567 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD1A3C5A1F84970B00E3B567 /* NotificationCenter.framework in Frameworks */,
+				4E0F9F67430C1680014A8AD6 /* Pods_DailyWidget.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FD79B67F1F79FF2200366762 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -104,6 +162,7 @@
 				FD5AF3441F7E363600F3343E /* FBSDKShareKit.framework in Frameworks */,
 				FD5AF3431F7E363600F3343E /* FBSDKLoginKit.framework in Frameworks */,
 				FD5AF3411F7E363600F3343E /* Bolts.framework in Frameworks */,
+				B38EE8FA8195ED061CDDFB4E /* Pods_DailyMoney.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +186,11 @@
 		59FC3622E248EC9BB922A858 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD1A3C7E1F84D68C00E3B567 /* DatePickerDialog.framework */,
+				FD1A3C7A1F84D27B00E3B567 /* Pods_DailyMoney.framework */,
+				FD1A3C701F84C56600E3B567 /* Charts.framework */,
+				FD1A3C6C1F84C47D00E3B567 /* Realm.framework */,
+				FD1A3C6D1F84C47D00E3B567 /* RealmSwift.framework */,
 				FD48D5FE1F80E98B00353AC9 /* Charts.framework */,
 				FD5AF33D1F7E363600F3343E /* Bolts.framework */,
 				FD5AF33E1F7E363600F3343E /* FBSDKCoreKit.framework */,
@@ -135,6 +199,8 @@
 				B205494B48BA89E8D8984924 /* Pods_DailyMoney.framework */,
 				3A54CE53172C63A72C3C3E64 /* Pods_DailyMoneyTests.framework */,
 				E921471013CBED45A68BA2B3 /* Pods_DailyMoneyUITests.framework */,
+				FD1A3C591F84970B00E3B567 /* NotificationCenter.framework */,
+				6144C7BA8CB925884D2AA277 /* Pods_DailyWidget.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -144,8 +210,22 @@
 			children = (
 				7A1DC74AFE38F6B73CC4CFC7 /* Pods-DailyMoney.debug.xcconfig */,
 				88915E06FDCEE445AC185668 /* Pods-DailyMoney.release.xcconfig */,
+				60FCB7169B2435603FBF4EA0 /* Pods-DailyWidget.debug.xcconfig */,
+				A5BC6B6FC376AB65B946CDCE /* Pods-DailyWidget.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FD1A3C5B1F84970B00E3B567 /* DailyWidget */ = {
+			isa = PBXGroup;
+			children = (
+				FD8013271F85DEA20046A27A /* DailyWidget.entitlements */,
+				FD1A3C5C1F84970B00E3B567 /* TodayViewController.swift */,
+				FD1A3C5E1F84970B00E3B567 /* MainInterface.storyboard */,
+				FD1A3C611F84970B00E3B567 /* Info.plist */,
+				FDF2DF151F8615BC009A3344 /* WidgetCell.swift */,
+			);
+			path = DailyWidget;
 			sourceTree = "<group>";
 		};
 		FD48D5F81F800D5100353AC9 /* DatePicker */ = {
@@ -188,6 +268,7 @@
 				FD79B6841F79FF2200366762 /* DailyMoney */,
 				FD79B6991F79FF2200366762 /* DailyMoneyTests */,
 				FD79B6A41F79FF2200366762 /* DailyMoneyUITests */,
+				FD1A3C5B1F84970B00E3B567 /* DailyWidget */,
 				FD79B6831F79FF2200366762 /* Products */,
 				D3FF045496F4E7DA13EE0984 /* Pods */,
 				59FC3622E248EC9BB922A858 /* Frameworks */,
@@ -200,6 +281,7 @@
 				FD79B6821F79FF2200366762 /* DailyMoney.app */,
 				FD79B6961F79FF2200366762 /* DailyMoneyTests.xctest */,
 				FD79B6A11F79FF2200366762 /* DailyMoneyUITests.xctest */,
+				FD1A3C581F84970B00E3B567 /* DailyWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -207,6 +289,7 @@
 		FD79B6841F79FF2200366762 /* DailyMoney */ = {
 			isa = PBXGroup;
 			children = (
+				FD8013281F85E9E00046A27A /* DailyMoney.entitlements */,
 				FD48D5F91F80E05D00353AC9 /* charts */,
 				FD48D5F81F800D5100353AC9 /* DatePicker */,
 				FD5AF3481F7FA0FE00F3343E /* Utility */,
@@ -283,6 +366,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FD1A3C571F84970B00E3B567 /* DailyWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD1A3C671F84970B00E3B567 /* Build configuration list for PBXNativeTarget "DailyWidget" */;
+			buildPhases = (
+				301AA2F7CF0F99E4FA8849F4 /* [CP] Check Pods Manifest.lock */,
+				FD1A3C541F84970B00E3B567 /* Sources */,
+				FD1A3C551F84970B00E3B567 /* Frameworks */,
+				FD1A3C561F84970B00E3B567 /* Resources */,
+				05E8E3F83EC8B6FEAD3BC347 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DailyWidget;
+			productName = DailyWidget;
+			productReference = FD1A3C581F84970B00E3B567 /* DailyWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		FD79B6811F79FF2200366762 /* DailyMoney */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD79B6AA1F79FF2200366762 /* Build configuration list for PBXNativeTarget "DailyMoney" */;
@@ -293,10 +395,12 @@
 				FD79B6801F79FF2200366762 /* Resources */,
 				5D023162D38013C399D993D3 /* [CP] Embed Pods Frameworks */,
 				B499749E32D77B08FC504D58 /* [CP] Copy Pods Resources */,
+				FD1A3C681F84970B00E3B567 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FD1A3C631F84970B00E3B567 /* PBXTargetDependency */,
 			);
 			name = DailyMoney;
 			productName = DailyMoney;
@@ -349,10 +453,25 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Narongsak Phungdee";
 				TargetAttributes = {
+					FD1A3C571F84970B00E3B567 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = CVW8B7M688;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					FD79B6811F79FF2200366762 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = CVW8B7M688;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					FD79B6951F79FF2200366762 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -384,11 +503,20 @@
 				FD79B6811F79FF2200366762 /* DailyMoney */,
 				FD79B6951F79FF2200366762 /* DailyMoneyTests */,
 				FD79B6A01F79FF2200366762 /* DailyMoneyUITests */,
+				FD1A3C571F84970B00E3B567 /* DailyWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FD1A3C561F84970B00E3B567 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD1A3C601F84970B00E3B567 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FD79B6801F79FF2200366762 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,6 +547,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		05E8E3F83EC8B6FEAD3BC347 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DailyWidget/Pods-DailyWidget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		301AA2F7CF0F99E4FA8849F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		5D023162D38013C399D993D3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -467,6 +625,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FD1A3C541F84970B00E3B567 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD9946A31F84EB5D00F92798 /* ReportCell.swift in Sources */,
+				FD9946A21F84DEA300F92798 /* ChartsMgr.swift in Sources */,
+				FD9946A11F84DEA000F92798 /* Utility.swift in Sources */,
+				FD9946A01F84DE8600F92798 /* DatabaseMgr.swift in Sources */,
+				FDF2DF161F8615BC009A3344 /* WidgetCell.swift in Sources */,
+				FD99469F1F84DE7F00F92798 /* ReportModel.swift in Sources */,
+				FD1A3C5D1F84970B00E3B567 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FD79B67E1F79FF2200366762 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -507,6 +679,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FD1A3C631F84970B00E3B567 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD1A3C571F84970B00E3B567 /* DailyWidget */;
+			targetProxy = FD1A3C621F84970B00E3B567 /* PBXContainerItemProxy */;
+		};
 		FD79B6981F79FF2200366762 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FD79B6811F79FF2200366762 /* DailyMoney */;
@@ -520,6 +697,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FD1A3C5E1F84970B00E3B567 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD1A3C5F1F84970B00E3B567 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		FD79B6891F79FF2200366762 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -539,6 +724,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FD1A3C651F84970B00E3B567 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60FCB7169B2435603FBF4EA0 /* Pods-DailyWidget.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DailyWidget/DailyWidget.entitlements;
+				DEVELOPMENT_TEAM = CVW8B7M688;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = DailyWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = th.co.kidrock.DailyMoney.DailyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FD1A3C661F84970B00E3B567 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5BC6B6FC376AB65B946CDCE /* Pods-DailyWidget.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DailyWidget/DailyWidget.entitlements;
+				DEVELOPMENT_TEAM = CVW8B7M688;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = DailyWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = th.co.kidrock.DailyMoney.DailyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		FD79B6A81F79FF2200366762 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -640,12 +865,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DailyMoney/DailyMoney.entitlements;
 				DEVELOPMENT_TEAM = CVW8B7M688;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = DailyMoney/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = th.co.kidrock.DailyMoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -659,12 +886,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DailyMoney/DailyMoney.entitlements;
 				DEVELOPMENT_TEAM = CVW8B7M688;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = DailyMoney/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = th.co.kidrock.DailyMoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -733,6 +962,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FD1A3C671F84970B00E3B567 /* Build configuration list for PBXNativeTarget "DailyWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD1A3C651F84970B00E3B567 /* Debug */,
+				FD1A3C661F84970B00E3B567 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FD79B67D1F79FF2200366762 /* Build configuration list for PBXProject "DailyMoney" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
