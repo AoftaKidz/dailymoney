@@ -116,7 +116,7 @@
 		FD5AF3401F7E363600F3343E /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		FD5AF3461F7F982E00F3343E /* SigninVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
 		FD5AF3491F7FA10F00F3343E /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
-		FD79B6821F79FF2200366762 /* TatimiiMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TatimiiMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD79B6821F79FF2200366762 /* DailyMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD79B6851F79FF2200366762 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD79B6871F79FF2200366762 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD79B68A1F79FF2200366762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -278,7 +278,7 @@
 		FD79B6831F79FF2200366762 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FD79B6821F79FF2200366762 /* TatimiiMoney.app */,
+				FD79B6821F79FF2200366762 /* DailyMoney.app */,
 				FD79B6961F79FF2200366762 /* DailyMoneyTests.xctest */,
 				FD79B6A11F79FF2200366762 /* DailyMoneyUITests.xctest */,
 				FD1A3C581F84970B00E3B567 /* DailyWidget.appex */,
@@ -404,7 +404,7 @@
 			);
 			name = DailyMoney;
 			productName = DailyMoney;
-			productReference = FD79B6821F79FF2200366762 /* TatimiiMoney.app */;
+			productReference = FD79B6821F79FF2200366762 /* DailyMoney.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FD79B6951F79FF2200366762 /* DailyMoneyTests */ = {
@@ -878,7 +878,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = th.co.kidrock.DailyMoney;
-				PRODUCT_NAME = TatimiiMoney;
+				PRODUCT_NAME = DailyMoney;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -899,7 +899,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = th.co.kidrock.DailyMoney;
-				PRODUCT_NAME = TatimiiMoney;
+				PRODUCT_NAME = DailyMoney;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

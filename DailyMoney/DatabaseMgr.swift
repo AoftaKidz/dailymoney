@@ -34,13 +34,13 @@ class DatabaseMgr {
 //    static let username:String = "Nuchkamol"
 //    static let password:String = "1234"
 //    static let specialKey:String = "#25"
-//    static let username:String = "KidRock"
-//    static let password:String = "46215720"
+    static let username:String = "KidRock"
+    static let password:String = "46215720"
 //    static let username:String = "JumJimYaiMai"
 //    static let password:String = "1234"
-    static let username:String = "Tatimii"
-    static let password:String = "1234"
-    static let specialKey:String = "#16"
+//    static let username:String = "Tatimii"
+//    static let password:String = "1234"
+    static let specialKey:String = "#14"
     static var isReadyToGo:Bool = false
     
     static let realm = try! Realm()
@@ -110,7 +110,18 @@ class DatabaseMgr {
                     }
                 }
             }
-            
+        }
+    }
+    
+    static func delete(datas:[ReportModel],date:String = Utility.currentDate()){
+        for model in datas{
+            let results = realm.objects(DBReportTable.self).filter("date == '\(date)' AND specialusername == '\(username)#\(specialKey)' AND title == '\(model.title)'")
+            if results.count > 0{
+                try! DatabaseMgr.realm.write {
+                    //delete expense
+                    DatabaseMgr.realm.delete(results)
+                }
+            }
         }
     }
     

@@ -16,5 +16,5 @@ class ReportModel {
     
     //Checkmark
     var isSelected:Bool = false
-    
+    var currentAmount:Float = 0.0
 }

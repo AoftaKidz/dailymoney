@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FD79B6811F79FF2200366762"
-               BuildableName = "TatimiiMoney.app"
+               BuildableName = "DailyMoney.app"
                BlueprintName = "DailyMoney"
                ReferencedContainer = "container:DailyMoney.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FD79B6811F79FF2200366762"
-            BuildableName = "TatimiiMoney.app"
+            BuildableName = "DailyMoney.app"
             BlueprintName = "DailyMoney"
             ReferencedContainer = "container:DailyMoney.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FD79B6811F79FF2200366762"
-            BuildableName = "TatimiiMoney.app"
+            BuildableName = "DailyMoney.app"
             BlueprintName = "DailyMoney"
             ReferencedContainer = "container:DailyMoney.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FD79B6811F79FF2200366762"
-            BuildableName = "TatimiiMoney.app"
+            BuildableName = "DailyMoney.app"
             BlueprintName = "DailyMoney"
             ReferencedContainer = "container:DailyMoney.xcodeproj">
          </BuildableReference>

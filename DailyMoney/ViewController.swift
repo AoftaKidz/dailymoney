@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         
         navigationController!.navigationBar.barTintColor = UIColor.black
         
-        self.title = "Tatimii Money"
+        self.title = "Daily Money"
         
         reload()
     }

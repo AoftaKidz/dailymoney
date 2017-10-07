@@ -10,6 +10,10 @@ import UIKit
 
 class ReportTableVC: UIViewController,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate {
 
+    @IBOutlet weak var btnDelete: UIButton!
+    @IBOutlet weak var btnExpand: UIButton!
+    @IBOutlet weak var viewAddExpenseBG: UIView!
+    @IBOutlet weak var constraintHeightAddExpense: NSLayoutConstraint!
     @IBOutlet weak var btnOK: UIButton!
     @IBOutlet weak var btnDeleteExpense: UIButton!
     @IBOutlet weak var btnAddExpense: UIButton!
@@ -17,20 +21,13 @@ class ReportTableVC: UIViewController,UITableViewDataSource,UITableViewDelegate,
     @IBOutlet weak var tfExpense: UITextField!
     @IBOutlet weak var tableView: UITableView!
     var dataLists:[ReportModel] = []
+    var dailyReports:[ReportModel] = []
+    
     var isKeyboardShowing:Bool = false
     var currentDate:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //Looks for single or multiple taps.
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ReportTableVC.dismissKeyboard))
-        
-        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-        //tap.cancelsTouchesInView = false
-        
-//        view.addGestureRecognizer(tap)
-        
 
         //Text Back
         navigationController!.navigationBar.topItem!.title = ""
@@ -50,10 +47,37 @@ class ReportTableVC: UIViewController,UITableViewDataSource,UITableViewDelegate,
         NotificationCenter.default.addObserver(self, selector: #selector(ReportTableVC.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         Utility.underlineButton(button: btnOK)
+        Utility.underlineButton(button: btnDelete)
         Utility.underlineButton(button: btnAddExpense)
         Utility.underlineButton(button: btnDeleteExpense)
-        
+        hideAddExpense()
         reloadDataTable()
+    }
+    
+    @IBAction func buttonExpandAddExpensePressed(_ sender: Any) {
+    
+        if self.constraintHeightAddExpense.constant == 0{
+            showAddExpense()
+        }else{
+            hideAddExpense()
+        }
+    }
+    
+    func showAddExpense(){
+        btnExpand.setImage(UIImage(named: "arrow_up"), for: .normal)
+        UIView.animate(withDuration: 0.3, animations: {
+            self.constraintHeightAddExpense.constant = 120
+//            self.viewAddExpenseBG.isHidden = false
+                    })
+        
+    }
+    
+    func hideAddExpense(){
+        btnExpand.setImage(UIImage(named: "arrow_down"), for: .normal)
+        UIView.animate(withDuration: 0.3, animations: {
+            self.constraintHeightAddExpense.constant = 0
+//            self.viewAddExpenseBG.isHidden = true
+        })
     }
     
     /**
@@ -129,6 +153,7 @@ class ReportTableVC: UIViewController,UITableViewDataSource,UITableViewDelegate,
         var reports:[ReportModel] = []
         for r in dataLists{
             if r.isSelected{
+                r.amount = r.amount+r.currentAmount
                 reports.append(r)
             }
         }
@@ -137,6 +162,20 @@ class ReportTableVC: UIViewController,UITableViewDataSource,UITableViewDelegate,
         
         navigationController?.popViewController(animated: true)
     }
+
+    @IBAction func deleteReportBtnPress(_ sender: Any) {
+        var reports:[ReportModel] = []
+        for r in dataLists{
+            if r.isSelected{
+                r.currentAmount = 0
+                reports.append(r)
+            }
+        }
+        
+        DatabaseMgr.delete(datas: reports,date: currentDate)
+        reloadDataTable()
+    }
+    
     
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
@@ -174,7 +213,15 @@ class ReportTableVC: UIViewController,UITableViewDataSource,UITableViewDelegate,
         }
         
         dataLists = DatabaseMgr.getExpense()
-        
+        dailyReports = DatabaseMgr.dailyReports()
+        for expense in dataLists{
+            for report in dailyReports{
+                if expense.title == report.title{
+                    expense.currentAmount = report.amount
+                    break
+                }
+            }
+        }
         tableView.reloadData()
     }
 
@@ -215,6 +262,12 @@ class ReportTableVC: UIViewController,UITableViewDataSource,UITableViewDelegate,
         cell.tfAmount.delegate = self
         cell.tfAmount.tag = indexPath.row
         cell.tfAmount.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
+        if report.currentAmount > 0{
+            cell.lbCurrentAmount.text = "\(report.currentAmount)"
+        }else{
+            cell.lbCurrentAmount.text = ""
+        }
         
         if report.isSelected == true{
 //            cell.accessoryType = .checkmark

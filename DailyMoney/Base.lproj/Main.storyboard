@@ -12,7 +12,7 @@
         <!--Daily Money-->
         <scene sceneID="0Wt-Ug-SYw">
             <objects>
-                <viewController storyboardIdentifier="Signin" id="UXC-Df-yWu" customClass="SigninVC" customModule="TatimiiMoney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Signin" id="UXC-Df-yWu" customClass="SigninVC" customModule="DailyMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X82-wa-sks"/>
                         <viewControllerLayoutGuide type="bottom" id="xLK-SE-Lo0"/>
@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lay3" translatesAutoresizingMaskIntoConstraints="NO" id="H01-LQ-Cbb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mariorun_bg" translatesAutoresizingMaskIntoConstraints="NO" id="H01-LQ-Cbb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5b-oc-Xx8">
@@ -138,16 +138,16 @@
         <!--Daily Money-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ShowReport" id="BYZ-38-t0r" customClass="ViewController" customModule="TatimiiMoney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowReport" id="BYZ-38-t0r" customClass="ViewController" customModule="DailyMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lay4" translatesAutoresizingMaskIntoConstraints="NO" id="Gho-bK-DGF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="super-mario-run-luigi" translatesAutoresizingMaskIntoConstraints="NO" id="Gho-bK-DGF">
                                 <rect key="frame" x="0.0" y="1" width="375" height="666"/>
                             </imageView>
                             <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1w-Xf-Hx9">
@@ -271,14 +271,14 @@
         <!--Table ReportVC-->
         <scene sceneID="iYn-MB-QCK">
             <objects>
-                <tableViewController storyboardIdentifier="TableReportVC" id="f03-zI-DYb" customClass="TableReportVC" customModule="TatimiiMoney" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TableReportVC" id="f03-zI-DYb" customClass="TableReportVC" customModule="DailyMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" id="mO2-nw-7VN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="596"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reportCell" rowHeight="50" id="zkj-Pm-knA" customClass="ReportCell" customModule="TatimiiMoney" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reportCell" rowHeight="50" id="zkj-Pm-knA" customClass="ReportCell" customModule="DailyMoney" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="56" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zkj-Pm-knA" id="Etq-Yj-6aJ">
@@ -330,7 +330,7 @@
                                     <outlet property="lbTitle" destination="Myj-kR-eEs" id="une-CD-JEf"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addDataCell" rowHeight="50" id="s8g-zJ-Yxm" customClass="ReportCell" customModule="TatimiiMoney" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addDataCell" rowHeight="50" id="s8g-zJ-Yxm" customClass="ReportCell" customModule="DailyMoney" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="106" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s8g-zJ-Yxm" id="56t-ty-rCc">
@@ -409,7 +409,7 @@
         <!--Content ViewVC-->
         <scene sceneID="Omy-Ab-lRM">
             <objects>
-                <viewController storyboardIdentifier="ContentViewVC" id="tkH-dw-buu" customClass="ContentViewVC" customModule="TatimiiMoney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContentViewVC" id="tkH-dw-buu" customClass="ContentViewVC" customModule="DailyMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZhK-VJ-X02"/>
                         <viewControllerLayoutGuide type="bottom" id="FCe-af-8u6"/>
@@ -435,7 +435,7 @@
                                 <rect key="frame" x="0.0" y="46" width="375" height="621"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reportCell" rowHeight="50" id="5J9-9c-gVW" customClass="ReportCell" customModule="TatimiiMoney" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reportCell" rowHeight="50" id="5J9-9c-gVW" customClass="ReportCell" customModule="DailyMoney" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5J9-9c-gVW" id="kYu-4V-0Ms">
@@ -514,13 +514,13 @@
         <!--Add Table ReportVC-->
         <scene sceneID="xAx-IF-cFZ">
             <objects>
-                <tableViewController storyboardIdentifier="AddTableReportVC" id="8At-Oo-iJS" customClass="AddTableReportVC" customModule="TatimiiMoney" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AddTableReportVC" id="8At-Oo-iJS" customClass="AddTableReportVC" customModule="DailyMoney" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jFN-Xr-oVg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reportCell" rowHeight="50" id="JG0-r1-7uB" customClass="ReportCell" customModule="TatimiiMoney" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reportCell" rowHeight="50" id="JG0-r1-7uB" customClass="ReportCell" customModule="DailyMoney" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JG0-r1-7uB" id="d63-sl-tnj">
@@ -580,7 +580,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="lay3" width="400" height="565"/>
-        <image name="lay4" width="213" height="331"/>
+        <image name="mariorun_bg" width="300" height="450"/>
+        <image name="super-mario-run-luigi" width="230" height="298"/>
     </resources>
 </document>
