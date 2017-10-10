@@ -146,8 +146,8 @@ class DatabaseMgr {
         
         var monthly:[ReportModel] = []
         let dateArray = date.components(separatedBy: "-")
-        let countDays = Utility.calDayByDate(date: date)
-        for day in 1...countDays{
+//        let countDays = Utility.calDayByDate(date: date)
+        for day in 1...31{
             
             var newDay = ""
             if day < 10{
@@ -158,7 +158,7 @@ class DatabaseMgr {
             
             let currDate = "\(newDay)-\(dateArray[1])-\(dateArray[2])"
             
-            let results = realm.objects(DBReportTable.self).filter("date == '\(currDate)' AND specialusername == '\(username)#\(specialKey)'")
+            let results = realm.objects(DBReportTable.self).filter("date = '\(currDate)' AND specialusername = '\(username)#\(specialKey)'")
             if results.count > 0{
                 var sumAmount:Float = 0.0
                 for c in results{

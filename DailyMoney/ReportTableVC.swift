@@ -213,7 +213,7 @@ class ReportTableVC: UIViewController,UITableViewDataSource,UITableViewDelegate,
         }
         
         dataLists = DatabaseMgr.getExpense()
-        dailyReports = DatabaseMgr.dailyReports()
+        dailyReports = DatabaseMgr.dailyReports(date: currentDate)
         for expense in dataLists{
             for report in dailyReports{
                 if expense.title == report.title{
