@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:10.104.249.46</string>
+		<string>applinks:aoftakidz.herokuapp.com</string>
 	</array>
 	<key>com.apple.security.application-groups</key>
 	<array>
