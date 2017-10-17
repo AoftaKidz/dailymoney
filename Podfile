@@ -9,6 +9,10 @@ target 'DailyMoney' do
   pod 'RealmSwift'
   pod 'DatePickerDialog'
   pod 'Charts', :git=>'https://github.com/danielgindi/Charts.git',:branch=>'pr/2378'
+  pod 'Firebase/Database'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  #pod 'Firebase/Firestore'
   
   post_install do |installer|
       installer.pods_project.targets.each do |target|

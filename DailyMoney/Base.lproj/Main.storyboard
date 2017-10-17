@@ -399,12 +399,67 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="UXC-Df-yWu" kind="relationship" relationship="rootViewController" id="VgT-Tv-G8J"/>
+                        <segue destination="wkl-tH-6Nv" kind="relationship" relationship="rootViewController" id="YL5-IH-FbA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SH3-k8-fll" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1754" y="103"/>
+        </scene>
+        <!--Delegate-->
+        <scene sceneID="g1m-mV-s3X">
+            <objects>
+                <viewController storyboardIdentifier="SocialSigninVC" id="wkl-tH-6Nv" customClass="SocialSigninVC" customModule="DailyMoney" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X3I-rd-3V5"/>
+                        <viewControllerLayoutGuide type="bottom" id="U5d-B0-WAl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kzh-TI-53P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yib-iX-J2h" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="16" y="52" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GNx-jn-rrI"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="wkl-tH-6Nv" id="NLo-7c-5nc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPN-ox-1xA">
+                                <rect key="frame" x="16" y="120" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.0010098794009536505" green="0.36890584230422974" blue="0.98081892728805542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Jor-dJ-cwC"/>
+                                </constraints>
+                                <state key="normal" title="Custom facebook login">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleCustomFBSignin:" destination="wkl-tH-6Nv" eventType="touchUpInside" id="a6v-Bz-ekh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FPN-ox-1xA" firstAttribute="top" secondItem="yib-iX-J2h" secondAttribute="bottom" constant="18" id="0rl-nm-cZO"/>
+                            <constraint firstItem="FPN-ox-1xA" firstAttribute="leading" secondItem="Kzh-TI-53P" secondAttribute="leadingMargin" id="3xm-yQ-bQG"/>
+                            <constraint firstItem="yib-iX-J2h" firstAttribute="top" secondItem="X3I-rd-3V5" secondAttribute="bottom" constant="8" id="bs9-Wc-T78"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FPN-ox-1xA" secondAttribute="trailing" id="dfP-hi-nkL"/>
+                            <constraint firstItem="yib-iX-J2h" firstAttribute="leading" secondItem="Kzh-TI-53P" secondAttribute="leadingMargin" id="hFS-xP-vnE"/>
+                            <constraint firstItem="yib-iX-J2h" firstAttribute="trailing" secondItem="Kzh-TI-53P" secondAttribute="trailingMargin" id="knh-Ll-ODP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gKh-qe-bXG"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="btnSignin" destination="yib-iX-J2h" id="jfz-26-lze"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VFY-ZI-rCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-970.39999999999998" y="-401.64917541229386"/>
         </scene>
         <!--Content ViewVC-->
         <scene sceneID="Omy-Ab-lRM">

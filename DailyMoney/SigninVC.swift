@@ -38,7 +38,9 @@ class SigninVC: UIViewController,UITextFieldDelegate {
         Utility.underlineLabel(label: lbSigningInHeader)
         Utility.underlineButton(button: btnSignin)
         DatabaseMgr.defaultUser()
-        
+//        FBDatabaseMgr.fb_user_add(user: DatabaseMgr.username, pass: DatabaseMgr.password, special: DatabaseMgr.specialKey)
+//        FBDatabaseMgr.fb_user_add(user: DatabaseMgr.username, pass: DatabaseMgr.password, special: DatabaseMgr.specialKey)
+//
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,8 +61,9 @@ class SigninVC: UIViewController,UITextFieldDelegate {
         
         view.endEditing(true)
         
-        let success = DatabaseMgr.signin(user: tfUsername.text!, pass: tfPassword.text!)
-        
+//        let success = DatabaseMgr.signin(user: tfUsername.text!, pass: tfPassword.text!)
+        let success = FBDatabaseMgr.fb_user_signin(user: DatabaseMgr.username, pass: DatabaseMgr.password)
+
         if success == true{
 //            let storyboard = UIStoryboard(name: "ReportTableStoryboard", bundle: nil)
             let vc = storyboard?.instantiateViewController(withIdentifier: "ShowReport") as! ViewController

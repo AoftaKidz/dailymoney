@@ -26,16 +26,16 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>dailymoney</string>
-				<string>fb1915657555340295</string>
+				<string>fb494989467531358</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>1915657555340295</string>
+	<string>494989467531358</string>
 	<key>FacebookDisplayName</key>
-	<string>CallingMelody</string>
+	<string>dailymoney</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>

@@ -44,6 +44,12 @@
 		FDC073DB1F7B529600C74740 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC073DA1F7B529600C74740 /* ReportCell.swift */; };
 		FDC073DD1F7B54BD00C74740 /* ContentViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC073DC1F7B54BD00C74740 /* ContentViewVC.swift */; };
 		FDCFF7ED1F7B98D30027BF29 /* AddTableReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFF7EC1F7B98D30027BF29 /* AddTableReportVC.swift */; };
+		FDE189291F8CB27600E4E466 /* FBDatabaseMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE189281F8CB27600E4E466 /* FBDatabaseMgr.swift */; };
+		FDE1892B1F8DD1C100E4E466 /* SocialSigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE1892A1F8DD1C100E4E466 /* SocialSigninVC.swift */; };
+		FDE2E8491F8C9FAA00B4E793 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDE2E8481F8C9FAA00B4E793 /* GoogleService-Info.plist */; };
+		FDE2E84A1F8C9FAA00B4E793 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDE2E8481F8C9FAA00B4E793 /* GoogleService-Info.plist */; };
+		FDE2E84B1F8C9FAA00B4E793 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDE2E8481F8C9FAA00B4E793 /* GoogleService-Info.plist */; };
+		FDE2E84C1F8C9FAA00B4E793 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDE2E8481F8C9FAA00B4E793 /* GoogleService-Info.plist */; };
 		FDF2DF161F8615BC009A3344 /* WidgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF2DF151F8615BC009A3344 /* WidgetCell.swift */; };
 		FDFC50F51F7CFB61005037B1 /* ReportTableStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDFC50F41F7CFB61005037B1 /* ReportTableStoryboard.storyboard */; };
 /* End PBXBuildFile section */
@@ -139,6 +145,9 @@
 		FDC073DA1F7B529600C74740 /* ReportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
 		FDC073DC1F7B54BD00C74740 /* ContentViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewVC.swift; sourceTree = "<group>"; };
 		FDCFF7EC1F7B98D30027BF29 /* AddTableReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableReportVC.swift; sourceTree = "<group>"; };
+		FDE189281F8CB27600E4E466 /* FBDatabaseMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBDatabaseMgr.swift; sourceTree = "<group>"; };
+		FDE1892A1F8DD1C100E4E466 /* SocialSigninVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialSigninVC.swift; sourceTree = "<group>"; };
+		FDE2E8481F8C9FAA00B4E793 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FDF2DF151F8615BC009A3344 /* WidgetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetCell.swift; sourceTree = "<group>"; };
 		FDFC50F41F7CFB61005037B1 /* ReportTableStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReportTableStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -250,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				FD5AF3461F7F982E00F3343E /* SigninVC.swift */,
+				FDE1892A1F8DD1C100E4E466 /* SocialSigninVC.swift */,
 			);
 			name = login;
 			sourceTree = "<group>";
@@ -303,6 +313,7 @@
 				FD79B68C1F79FF2200366762 /* Assets.xcassets */,
 				FD79B68E1F79FF2200366762 /* LaunchScreen.storyboard */,
 				FD79B6911F79FF2200366762 /* Info.plist */,
+				FDE2E8481F8C9FAA00B4E793 /* GoogleService-Info.plist */,
 				FDC073DC1F7B54BD00C74740 /* ContentViewVC.swift */,
 			);
 			path = DailyMoney;
@@ -329,6 +340,7 @@
 		FD824A371F7B8155003C4139 /* database */ = {
 			isa = PBXGroup;
 			children = (
+				FDE189281F8CB27600E4E466 /* FBDatabaseMgr.swift */,
 				FD824A381F7B8176003C4139 /* DatabaseMgr.swift */,
 				FD1439521F7B8E0A008B26E6 /* Reports.plist */,
 			);
@@ -471,6 +483,9 @@
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
 							com.apple.SafariKeychain = {
 								enabled = 1;
 							};
@@ -517,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD1A3C601F84970B00E3B567 /* MainInterface.storyboard in Resources */,
+				FDE2E84C1F8C9FAA00B4E793 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +546,7 @@
 				FDFC50F51F7CFB61005037B1 /* ReportTableStoryboard.storyboard in Resources */,
 				FD1439531F7B8E0A008B26E6 /* Reports.plist in Resources */,
 				FD79B68B1F79FF2200366762 /* Main.storyboard in Resources */,
+				FDE2E8491F8C9FAA00B4E793 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +554,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDE2E84A1F8C9FAA00B4E793 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +562,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDE2E84B1F8C9FAA00B4E793 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,9 +673,11 @@
 				FDC073D71F7B4D2500C74740 /* ReportModel.swift in Sources */,
 				FDC073D41F7AB1A100C74740 /* TableReportVC.swift in Sources */,
 				FD79B6861F79FF2200366762 /* AppDelegate.swift in Sources */,
+				FDE1892B1F8DD1C100E4E466 /* SocialSigninVC.swift in Sources */,
 				FDB0B12D1F81289F00DB0866 /* ChartCell.swift in Sources */,
 				FD48D5FD1F80E29D00353AC9 /* ChartsVC.swift in Sources */,
 				FD824A391F7B8176003C4139 /* DatabaseMgr.swift in Sources */,
+				FDE189291F8CB27600E4E466 /* FBDatabaseMgr.swift in Sources */,
 				FDC073DB1F7B529600C74740 /* ReportCell.swift in Sources */,
 				FDCFF7ED1F7B98D30027BF29 /* AddTableReportVC.swift in Sources */,
 				FD5AF33C1F7D46CA00F3343E /* ReportTableVC.swift in Sources */,

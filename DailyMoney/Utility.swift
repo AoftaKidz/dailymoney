@@ -9,6 +9,13 @@
 import Foundation
 import UIKit
 
+class DailyUser {
+    static var name = ""
+    static var email = ""
+    static var profilePicture = ""
+    
+}
+
 class Utility {
     
     static var widgetReport:[ReportModel] = []

@@ -5,10 +5,15 @@
 	<key>com.apple.developer.associated-domains</key>
 	<array>
 		<string>applinks:10.104.249.46</string>
+		<string>applinks:10.239.223.14</string>
 	</array>
 	<key>com.apple.security.application-groups</key>
 	<array>
 		<string>group.dataGobalTest</string>
+	</array>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>$(AppIdentifierPrefix)th.co.kidrock.DailyMoney</string>
 	</array>
 </dict>
 </plist>
