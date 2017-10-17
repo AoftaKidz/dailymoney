@@ -38,6 +38,8 @@ class DatabaseMgr {
 //    static let password:String = "46215720"
     static let username:String = "JumJimYaiMai"
     static let password:String = "1234"
+//    static let username:String = "Tatimii"
+//    static let password:String = "1234"
     static let specialKey:String = "#14"
     static var isReadyToGo:Bool = false
     
@@ -108,7 +110,18 @@ class DatabaseMgr {
                     }
                 }
             }
-            
+        }
+    }
+    
+    static func delete(datas:[ReportModel],date:String = Utility.currentDate()){
+        for model in datas{
+            let results = realm.objects(DBReportTable.self).filter("date == '\(date)' AND specialusername == '\(username)#\(specialKey)' AND title == '\(model.title)'")
+            if results.count > 0{
+                try! DatabaseMgr.realm.write {
+                    //delete expense
+                    DatabaseMgr.realm.delete(results)
+                }
+            }
         }
     }
     
@@ -133,8 +146,8 @@ class DatabaseMgr {
         
         var monthly:[ReportModel] = []
         let dateArray = date.components(separatedBy: "-")
-        let countDays = Utility.calDayByDate(date: date)
-        for day in 1...countDays{
+//        let countDays = Utility.calDayByDate(date: date)
+        for day in 1...31{
             
             var newDay = ""
             if day < 10{
@@ -145,7 +158,7 @@ class DatabaseMgr {
             
             let currDate = "\(newDay)-\(dateArray[1])-\(dateArray[2])"
             
-            let results = realm.objects(DBReportTable.self).filter("date == '\(currDate)' AND specialusername == '\(username)#\(specialKey)'")
+            let results = realm.objects(DBReportTable.self).filter("date = '\(currDate)' AND specialusername = '\(username)#\(specialKey)'")
             if results.count > 0{
                 var sumAmount:Float = 0.0
                 for c in results{

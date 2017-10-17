@@ -34,7 +34,7 @@ class ChartsVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
 //        pieChart()
 //        lineChart()
 //        barChart()
-        dailyChart(chartType: ChartData.CHART_TYPE_BAR)
+//        dailyChart(chartType: ChartData.CHART_TYPE_BAR)
         monthlyChart(chartType: ChartData.CHART_TYPE_LINE)
         
     }

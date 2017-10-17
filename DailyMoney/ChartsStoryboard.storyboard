@@ -16,11 +16,11 @@
                         <viewControllerLayoutGuide type="top" id="nKH-VJ-wR2"/>
                         <viewControllerLayoutGuide type="bottom" id="dHE-jU-Ly1"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2fO-ip-iCA">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="2fO-ip-iCA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jum_bg" translatesAutoresizingMaskIntoConstraints="NO" id="ctp-TE-uq4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jum3" translatesAutoresizingMaskIntoConstraints="NO" id="ctp-TE-uq4">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qRZ-AX-Cn7">
@@ -32,10 +32,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lineChartCell" rowHeight="240" id="DmQ-Dz-TKg" customClass="ChartCell" customModule="DailyMoney" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="240"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="240"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DmQ-Dz-TKg" id="p7e-lJ-fZZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="239.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1E-DO-gN6" customClass="LineChartView" customModule="Charts">
@@ -57,10 +57,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="barChartCell" rowHeight="240" id="cwl-pn-ZU2" customClass="ChartCell" customModule="DailyMoney" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="295.5" width="375" height="240"/>
+                                        <rect key="frame" x="0.0" y="296" width="375" height="240"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cwl-pn-ZU2" id="5mv-AV-nxl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="239.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEb-av-cRV" customClass="BarChartView" customModule="Charts">
@@ -82,10 +82,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pieChartCell" rowHeight="240" id="zhZ-K8-Ff4" customClass="ChartCell" customModule="DailyMoney" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="535.5" width="375" height="240"/>
+                                        <rect key="frame" x="0.0" y="536" width="375" height="240"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zhZ-K8-Ff4" id="cTj-Pf-TGD">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="239.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Smf-fv-lBh" customClass="PieChartView" customModule="Charts">
@@ -140,6 +140,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="jum_bg" width="400" height="565"/>
+        <image name="jum3" width="2048" height="1152"/>
     </resources>
 </document>

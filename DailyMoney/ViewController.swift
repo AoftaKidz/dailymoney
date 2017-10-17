@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         
         navigationController!.navigationBar.barTintColor = UIColor.black
         
-        self.title = "Daily Money"
+        self.title = "Tatimii Money"
 
         currentDate = Utility.currentDate()
         

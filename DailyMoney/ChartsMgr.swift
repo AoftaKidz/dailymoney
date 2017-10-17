@@ -27,6 +27,11 @@ class ChartsMgr {
     static func line(points:ChartData,view:LineChartView){
         var chartData:[ChartDataEntry] = []
         let count = points.x.count - 1
+        
+        if count < 0{
+            return
+        }
+        
         for i in 0...count{
             
             let p = ChartDataEntry(x: points.x[i], y: points.y[i])
@@ -50,6 +55,11 @@ class ChartsMgr {
         
         var chartData:[BarChartDataEntry] = []
         let count = points.x.count - 1
+        
+        if count < 0{
+            return
+        }
+        
         for i in 0...count{
             
             let p = BarChartDataEntry(x: points.x[i], y: points.y[i])
@@ -75,6 +85,11 @@ class ChartsMgr {
         var chartData:[PieChartDataEntry] = []
         
         let count = points.x.count - 1
+        
+        if count < 0{
+            return
+        }
+        
         for i in 0...count{
             
             let p = PieChartDataEntry(value: points.x[i], label: points.label[i])
